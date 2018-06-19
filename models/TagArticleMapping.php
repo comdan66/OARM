@@ -2,7 +2,7 @@
 
 namespace M;
 
-class TagArticleMapping {
+class TagArticleMapping extends Model {
   static $hasOne = [
   ];
   

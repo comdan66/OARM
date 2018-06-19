@@ -2,7 +2,7 @@
 
 namespace M;
 
-class Article {
+class Article extends Model {
   static $hasOne = [
   ];
   
@@ -17,22 +17,22 @@ class Article {
   ];
 
   static $uploaders = [
-    'file'  => 'ArticleCoverFileUploader'
+    'file'  => 'ArticleCoverFileUploader',
     'cover' => 'ArticleCoverImageUploader',
   ];
 }
 
-class ArticleCoverImageUploader extends ImageUploader {
-  public function versions() {
-    return [
-      ''          => [],
-      'w100'      => ['resize', 100, 100, 'width'],
-      'w1440'     => ['resize', 1440, 1440, 'width'],
-      'c1200x630' => ['adaptiveResizeQuadrant', 1200, 630, 't'],
-    ];
-  }
-}
+// class ArticleCoverImageUploader extends ImageUploader {
+//   public function versions() {
+//     return [
+//       ''          => [],
+//       'w100'      => ['resize', 100, 100, 'width'],
+//       'w1440'     => ['resize', 1440, 1440, 'width'],
+//       'c1200x630' => ['adaptiveResizeQuadrant', 1200, 630, 't'],
+//     ];
+//   }
+// }
 
-class ArticleCoverFileUploader extends FileUploader {
+// class ArticleCoverFileUploader extends FileUploader {
 
-}
+// }

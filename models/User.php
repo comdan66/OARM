@@ -2,7 +2,7 @@
 
 namespace M;
 
-class User {
+class User extends Model {
   static $hasOne = [
   ];
   

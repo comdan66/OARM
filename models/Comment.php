@@ -2,7 +2,7 @@
 
 namespace M;
 
-class Comment {
+class Comment extends Model {
   static $hasOne = [
   ];
   

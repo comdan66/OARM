@@ -2,7 +2,7 @@
 
 namespace M;
 
-class Tag {
+class Tag extends Model {
   static $hasOne = [
   ];
   
