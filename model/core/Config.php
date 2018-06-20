@@ -5,11 +5,21 @@ namespace _M;
 require_once 'Where.php';
 
 class Config {
+
+  const DATE_FORMAT = 'Y-m-d';
+  const DATETIME_FORMAT = 'Y-m-d H:i:s';
+  
   private static $modelsDir = null;
   private static $queryLogerFunc = null;
   private static $logerFunc = null;
   private static $connection = [];
   private static $errorFunc = null;
+
+  public static $quoteCharacter = '`';
+
+  public static function quoteName($string) {
+    return $string[0] === static::$quoteCharacter || $string[strlen($string) - 1] === static::$quoteCharacter ? $string : static::$quoteCharacter . $string . static::$quoteCharacter;
+  }
 
   public static function setModelsDir($modelsDir) {
     is_dir($modelsDir) && is_readable($modelsDir) && self::$modelsDir = rtrim($modelsDir, DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR;
@@ -78,4 +88,4 @@ class Config {
   }
 }
 
-spl_autoload_register (['\_M\Config', '__autoloadModel'], false, MODEL_PREPEND);
+spl_autoload_register(['\_M\Config', '__autoloadModel'], false, true);

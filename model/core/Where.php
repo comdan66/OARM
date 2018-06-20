@@ -4,7 +4,7 @@ class Where {
   public static $errorFunc = null;
   private $where = [];
 
-  public function __construct($where = []) {
+  protected function __construct($where = []) {
     $this->where = $where;
   }
 
@@ -67,7 +67,7 @@ class Where {
       $str = array_shift($args);
     }
 
-    count($args) < ($c = substr_count($str, '?')) && ($error = '參數錯誤。「' . $str . '」 有 ' . $c . ' 個參數，目前只給 ' . count($args) . ' 個。') && ($func = Where::$errorFunc) && is_callable($func) ? $func($error) : exit($error);
+    count($args) < ($c = substr_count($str, '?')) && ($error = '參數錯誤。「' . $str . '」 有 ' . $c . ' 個參數，目前只給 ' . count($args) . ' 個。') && (($func = Where::$errorFunc) && is_callable($func) ? $func($error) : exit($error));
 
     $where[0] = $where ? '(' . $where[0] . ')' . ' AND(' . $str . ')' : $str;
 
@@ -92,7 +92,7 @@ class Where {
       $str = array_shift($args);
     }
 
-    count($args) < ($c = substr_count($str, '?')) && ($error = '參數錯誤。「' . $str . '」 有 ' . $c . ' 個參數，目前只給 ' . count($args) . ' 個。') && ($func = Where::$errorFunc) && is_callable($func) ? $func($error) : exit($error);
+    count($args) < ($c = substr_count($str, '?')) && ($error = '參數錯誤。「' . $str . '」 有 ' . $c . ' 個參數，目前只給 ' . count($args) . ' 個。') && (($func = Where::$errorFunc) && is_callable($func) ? $func($error) : exit($error));
 
     $where[0] = $where ? '(' . $where[0] . ')' . ' OR(' . $str . ')' : '(' . $str . ')';
 
