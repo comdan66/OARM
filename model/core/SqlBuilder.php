@@ -38,6 +38,7 @@ class SqlBuilder {
       return $this;
 
     $this->toStringFunc = 'buildSelect';
+
     $this->select = $select ? $select : '*';
     return $this;
   }
@@ -46,7 +47,20 @@ class SqlBuilder {
     if ($where === null)
       return $this;
 
-    $this->where = array_shift($where);
+    $whereStr = array_shift($where);
+
+    $i = 0;
+    foreach ($where as &$value)
+      if (is_array($value)) {
+        ($i = strpos($whereStr, '(?)', $i)) === false && Config::error('Where 格式有誤！', '條件：'. $whereStr, '參數：' . implode(',', $value));
+        $whereStr = substr($whereStr, 0, $i) . '(' . ($value ? implode(',', array_map(function () { return '?'; }, $value)) : '?') . ')' . substr($whereStr, $i += 3);
+        $value = $value ? $value : 'null';
+      }
+
+    $where = \M\arrayFlatten($where);
+    substr_count($whereStr, '?') == count($where) || Config::error('Where 格式有誤！', '條件：' . $whereStr, '參數：' . implode(',', $where));
+
+    $this->where = $whereStr;
     $this->values = $where;
 
     return $this;
@@ -154,8 +168,8 @@ class SqlBuilder {
     return $sql;
   }
   public function buildInsert() {
-    $keys = implode(', ', array_map(function ($t) { return Config::quoteName($t); }, array_keys($this->data)));
-    $sql = "INSERT INTO " . $this->quoteTableName . "(" . $keys . ") VALUES(?)";
+    $keys = array_map(function ($t) { return Config::quoteName($t); }, array_keys($this->data));
+    $sql = "INSERT INTO " . $this->quoteTableName . "(" . implode(', ', $keys) . ") VALUES(" . implode(', ', array_map(function () { return '?'; }, $keys)) . ")";
     return $sql;
   }
 

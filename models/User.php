@@ -7,7 +7,8 @@ class User extends Model {
   ];
   
   static $hasMany = [
-    'articles' => ['model' => 'Article'],
+    // 'articles' => 'Article',
+    'articles' => ['model' => 'Article', 'select' => 'id'],
   ];
 
   static $belongsTo = [

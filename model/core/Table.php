@@ -47,20 +47,17 @@ class Table {
     $sql = SqlBuilder::create(Config::quoteName($this->tableName))
                      ->setSelectOption($options);
 
-    return $this->findBySql($sql, $sql->getValues(), isset($options['readonly']) ? (bool)$options['readonly'] : false);
+    return $this->findBySql($sql, $sql->getValues(), isset($options['readonly']) ? (bool)$options['readonly'] : false, isset($options['include']) ? is_string($options['include']) ? [$options['include']] : $options['include'] : []);
   }
 
   public function processDataToStr($data) {
     foreach ($data as $name => &$value)
-      if ($value instanceof \DateTime)
-        if (isset($this->columns[$name]) && $this->columns[$name]->type == Column::DATE)
-          $hash[$name] = $value->format(\_M\Config::DATE_FORMAT);
-        else
-          $hash[$name] = $value->format(\_M\Config::DATETIME_FORMAT);
+      if ($value instanceof DateTime)
+        $value = $value->format(null, null);
       else
-        $hash[$name] = $value;
+        $value = $value;
 
-    return $hash;
+    return $data;
   }
 
   private function mergeWherePrimaryKeys($primaryKeys) {
@@ -92,8 +89,11 @@ class Table {
 
     return Connection::instance()->query($sql, array_values($data));
   }
+
+
   public function update($data, $primaryKeys) {
     $data = $this->processDataToStr($data);
+    
 
     $where = $this->mergeWherePrimaryKeys($primaryKeys);
 
@@ -106,7 +106,7 @@ class Table {
   }
 
   public function findBySql($sql, $values = [], $readonly = false, $includes = []) {
-    $list = $attrs = [];
+    $list = [];
 
     $sth = Connection::instance()->query($sql, $values);
 
@@ -116,9 +116,18 @@ class Table {
       $model->setTableName($this->tableName);
       $model->setClassName($this->className);
       $model->setIsReadonly($readonly);
-
+      // $model->setIncludes($includes);
+      // $includes
+      // $includes && 
       array_push($list, $model);
     }
+
+    foreach ($includes as $include) {
+      echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
+      var_dump ($include);
+      exit ();
+    }
+
 
     return $list;
   }

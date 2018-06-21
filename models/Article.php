@@ -3,7 +3,7 @@
 namespace M;
 
 class Article extends Model {
-  // static $tableName ='Article';
+  // static $tableName ='devices';
 
   static $hasOne = [
   ];

@@ -47,7 +47,7 @@ class Column {
     $this->setRawTypeLength($row);
 
     $this->setType();
-    $this->default = $this->cast($row['default']);
+    $this->default = $this->cast($row['default'], false);
 
   }
 
@@ -79,7 +79,7 @@ class Column {
     return new Column(array_change_key_case($row, CASE_LOWER));
   }
 
-  public function cast($val) {
+  public function cast($val, $checkFormat) {
     if ($val === null)
       return null;
 
@@ -97,13 +97,10 @@ class Column {
         if (!$val)
           return null;
 
-        if ($val instanceof \DateTime)
-          return $dateClass::createFromFormat(Config::DATETIME_FORMAT, $val->format(Connection::DATETIME_TRANSLATE_FORMAT), $val->getTimezone());
+        $val = DateTime::createByString($val, $this->type);
+        $checkFormat && !$val->isFormat() && Config::error($checkFormat);
 
-        $val = date_create($val);
-        $errors = \DateTime::getLastErrors();
-
-        return $errors['warning_count'] || $errors['error_count'] ? null : $val;
+        return $val;
     }
     return $val;
   }

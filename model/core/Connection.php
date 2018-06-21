@@ -82,6 +82,9 @@ class Connection {
     return true;
   }
 
+  public function lastInsertId() {
+    return $this->connection->lastInsertId();
+  }
   public function rollback() {
     if (!$this->connection) return false;
     $this->connection->rollback() || Config::error('Rollback 失敗！');

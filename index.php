@@ -70,7 +70,9 @@ class Benchmark {
 
 class Log {
   public static function query($valid, $time, $sql, $values) {
-    var_dump ($valid, $time, $sql, $values);
+    // echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
+    // var_dump ($valid, $time, ''.$sql, $values);
+    // echo "<hr/>";
     // exit ();
   }
   public static function error($error) {
@@ -82,7 +84,7 @@ class Log {
 Benchmark::markStar('整體');
 
 \_M\Config::setModelsDir (__DIR__ . '/models/');
-// \_M\Config::setQueryLogerFunc ('Log::query');
+\_M\Config::setQueryLogerFunc ('Log::query');
 \_M\Config::setLogerFunc ('Log::error');
 \_M\Config::setErrorFunc ('gg');
 \_M\Config::setConnection ([
@@ -100,11 +102,53 @@ Benchmark::markStar('整體');
 //   return true;
 // });
 
-$obj = M\Article::create ([
-  'name' => 'OA'
-]);
+// $obj = M\Article::create ([
+//         'name' => 'oa1',
+//         'd' => date('2017-11-11'),
+// ]);
 
-$obj->name = 'OA';
+// $user = M\User::one(['where' => 'id = 1']);
+
+// echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
+// var_dump (count($user->articles));
+// exit ();
+
+// $article = M\Article::one(['where' => 'id = 1']);
+
+// echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
+// var_dump ($article->user->name);
+// exit ();
+
+$users = \M\User::all(['limit' => 10, 'include' => ['articles'], 'where' => ['id IN (?)', [] ]]);
+
+// echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
+// var_dump ($users);
+// exit ();
+
+foreach ($users as $user) {
+  echo $user->id .' - '. count($user->articles) . "<br>";
+}
+
+// var_dump ();
+// exit (); 
+// $articles = M\Article::all(['where' => 'userId = 1']);
+
+// echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
+// var_dump ($user->columns(), $articles);
+
+// echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
+// var_dump ($obj->createdAt);
+// exit ();
+// sleep(1);
+
+// $obj->d = '2017-11-11';
+// echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
+// var_dump ($obj->d);
+// exit ();
+// echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
+// var_dump ($obj->createdAt);
+// exit ();
+// $obj->save();
 
 // $obj = M\Article::one();
 
