@@ -10,6 +10,8 @@ define('MODEL_LOADED', true);
 require_once 'Func.php';
 require_once 'core/Config.php';
 
+$modelRecord = [];
+
 Class Model {
   private static $validOptions = ['where', 'limit', 'offset', 'order', 'select', 'include', 'readonly', 'group', 'having'];
 
@@ -29,6 +31,10 @@ Class Model {
     return call_user_func_array(['static', 'find'], array_merge(['all'], func_get_args()));
   }
 
+  public static function count($options = []) {
+    $obj = call_user_func_array(['static', 'find'], array_merge(['one'], [array_merge($options, ['select' => 'COUNT(*)', 'readonly' => true])]))->getAttrs();
+    return intval($obj = array_shift($obj));
+  }
   public static function find() {
     $className = get_called_class();
     
@@ -56,6 +62,7 @@ Class Model {
     $method == 'last' && $options['order'] = isset ($options['order']) ? self::reverseOrder ((string)$options['order']) : implode(' DESC, ', static::table()->primaryKeys) . ' DESC';
 
     // 過濾對的 key by validOptions
+    
     $options && $options = array_intersect_key($options, array_flip(self::$validOptions));
 
     in_array ($method, ['one', 'first']) && $options = array_merge($options, ['limit' => 1, 'offset' => 0]);
@@ -75,11 +82,13 @@ Class Model {
     return \_M\Table::instance(get_called_class());
   }
 
+  private $attrs = [];
   private $className = null;
   private $tableName = null;
-  private $attrs = [];
+  
   private $dirty = [];
   private $isNew = true;
+
   private $relations = [];
   private $isReadonly = false;
 
@@ -95,6 +104,12 @@ Class Model {
   public function setTableName($tableName) {
     $this->tableName = $tableName;
     return $this;
+  }
+  public function getAttrs($key = null) {
+    return $key === null || !array_key_exists($key, $this->attrs) ? $this->attrs : $this->attrs[$key];
+  }
+  public function getTableName() {
+    return $this->tableName;
   }
   public function setIsNew($isNew) {
     if ($this->isNew = $isNew)
@@ -112,6 +127,8 @@ Class Model {
     foreach ($attrs as $name => $value)
       if (isset(static::table()->columns[$name]))
         $this->setAttr($name, $value);
+      else
+        $this->attrs[$name] = $value;
 
     return $this;
   }
@@ -129,29 +146,90 @@ Class Model {
   }
 
 
+  public static function relations($key, $options, $models, $include) {
+    if (!$models)
+      return [];
+
+    is_string($options) && $options = ['model' => $options];
+    
+    $className = '\\M\\' . $options['model'];
+    $tableName = $models[0]->getTableName();
+
+    $primaryKey = !isset($options['primaryKey']) ? 'id' : $options['primaryKey'];
+    $methodOne = in_array($key, ['hasOne', 'belongToOne']);
+
+    if (in_array($key, ['belongToOne', 'belongToMany'])) {
+      $foreignKey = !isset($options['foreignKey']) ? lcfirst($options['model']) . 'Id' : $options['foreignKey'];
+      $options && $options = array_intersect_key($options, array_flip(self::$validOptions));
+      
+      $foreignKeys = array_unique(array_map(function ($model) use ($foreignKey) { return $model->$foreignKey; }, $models));
+      
+      $where = \Where::create($primaryKey . ' IN (?)', $foreignKeys);
+      $options['where'] = isset($options['where']) ? \Where::create($options['where'])->and($where) : $where;
+      isset($options['select']) && $options['select'] .= ',' . $primaryKey;
+      
+      $relations = $className::all($options);
+      
+      $tmps = [];
+      foreach ($relations as $relation) 
+        if (isset($tmps[$relation->$primaryKey]))
+          array_push($tmps[$relation->$primaryKey], $relation);
+        else
+          $tmps[$relation->$primaryKey] = [$relation];
+
+      foreach ($models as $model)
+        if (isset($tmps[$model->$foreignKey]))
+          $model->relations[$include] = $methodOne ? $tmps[$model->$foreignKey] ? $tmps[$model->$foreignKey][0] : null : $tmps[$model->$foreignKey];
+        else
+          $model->relations[$include] = $methodOne ? null : [];
+
+    } else {
+      $foreignKey = !isset($options['foreignKey']) ? lcfirst($tableName) . 'Id' : $options['foreignKey'];
+
+      $options && $options = array_intersect_key($options, array_flip(self::$validOptions));
+
+      $primaryKeys = array_unique(array_map(function ($model) use ($primaryKey) { return $model->$primaryKey; }, $models));
+
+      $where = \Where::create($foreignKey . ' IN (?)', $primaryKeys);
+      $options['where'] = isset($options['where']) ? \Where::create($options['where'])->and($where) : $where;
+      isset($options['select']) && $options['select'] .= ',' . $foreignKey;
+
+      $relations = $className::all($options);
+
+      $tmps = [];
+
+      foreach ($relations as $relation) 
+        if (isset($tmps[$relation->$foreignKey]))
+          array_push($tmps[$relation->$foreignKey], $relation);
+        else
+          $tmps[$relation->$foreignKey] = [$relation];
+
+      foreach ($models as $model)
+        if (isset($tmps[$model->$primaryKey]))
+          $model->relations[$include] = $methodOne ? $tmps[$model->$primaryKey] ? $tmps[$model->$primaryKey][0] : null : $tmps[$model->$primaryKey];
+        else
+          $model->relations[$include] = $methodOne ? null : [];
+    }
+    $tmps = $primaryKeys = $foreignKey = null;
+  }
 
   public function relation($key, $options) {
     is_string($options) && $options = ['model' => $options];
     
     $className = '\\M\\' . $options['model'];
+    $isBelong = in_array($key, ['belongToOne', 'belongToMany']);
 
-    isset($options['foreignKey']) || $options['foreignKey'] = ($key == 'belongsTo' ? lcfirst($options['model']) : $this->tableName) . 'Id';
-    $foreignKey = $options['foreignKey'];
-
-    isset($options['primaryKey']) || $options['primaryKey'] = 'id';
-    $primaryKey = $options['primaryKey'];
+    $foreignKey = !isset($options['foreignKey']) ? ($isBelong ? lcfirst($options['model']) : lcfirst($this->tableName)) . 'Id' : $options['foreignKey'];
+    $primaryKey = !isset($options['primaryKey']) ? 'id' : $options['primaryKey'];
 
     $options && $options = array_intersect_key($options, array_flip(self::$validOptions));
     
-    if ($key == 'belongsTo')
+    if ($isBelong)
       $options['where'] = isset($options['where']) ? \Where::create($options['where'])->and($primaryKey . ' = ?', $this->$foreignKey) : \Where::create($primaryKey . ' = ?', $this->$foreignKey);
     else
       $options['where'] = isset($options['where']) ? \Where::create($options['where'])->and($foreignKey . ' = ?', $this->$primaryKey) : \Where::create($foreignKey . ' = ?', $this->$primaryKey);
     
-    $method = in_array($key, ['hasOne', 'belongsTo']) ? 'one' : 'all';
-
-echo "1 - ";
-
+    $method = in_array($key, ['hasOne', 'belongToOne']) ? 'one' : 'all';
 
     return $className::$method($options);
   }
@@ -169,13 +247,12 @@ echo "1 - ";
     
     $className = $this->className;
 
-
     if (array_key_exists($name, $this->relations))
       return $this->relations[$name];
 
     $relation = [];
-    foreach (['hasOne', 'hasMany', 'belongsTo'] as $val)
-      if (($tmp = $className::$$val) && isset($tmp[$name])) {
+    foreach (['hasOne', 'hasMany', 'belongToOne', 'belongToMany'] as $val)
+      if (isset($className::$$val) && ($tmp = $className::$$val) && isset($tmp[$name])) {
         $this->relations[$name] = $this->relation($val, $tmp[$name]);
         return $this->relations[$name];
       }
@@ -188,10 +265,13 @@ echo "1 - ";
 
     // array_key_exists($name, $this->attrs)
 
-    \_M\Config::error($this->className . ' 找不到名稱為「' . $name . '」的欄位！');
+    \_M\Config::error($this->className . ' 找不到名稱為「' . $name . '」此物件變數！');
   }
 
   public function __set($name, $value) {
+    if ($this->isReadonly)
+      \_M\Config::error('此物件是唯讀的狀態！');
+
     if (array_key_exists($name, $this->attrs) && isset(static::table()->columns[$name]))
       return $this->setAttr($name, $value);
 
@@ -267,5 +347,21 @@ echo "1 - ";
     $model->save();
     return $model;
   }
+  public function __toString() {
+    return json_encode(array_map(function ($attr) {
+      return '' . $attr;
+    }, $this->attrs));
+  }
 
+  public static function query($sql, $values = []) {
+    $sth = \_M\Connection::instance()->query($sql, $values);
+    echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
+    var_dump ($sth->fetchAll());
+    exit ();
+    while ($row = $sth->fetch()) {
+      echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
+      var_dump ($row);
+      exit ();
+    }
+  }
 }

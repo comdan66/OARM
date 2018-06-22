@@ -48,7 +48,7 @@ class Connection {
       $sth = $this->connection->prepare((string)$sql);
       $sth || Config::error('執行 Connection prepare 失敗！');
 
-      $sth->setFetchMode(PDO::FETCH_ASSOC);
+      $sth->setFetchMode(PDO::FETCH_OBJ);
 
       $this->execute($sth, $sql, $vals) || Config::error('執行 Connection execute 失敗！');
     } catch (PDOException $e) {

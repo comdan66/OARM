@@ -38,7 +38,6 @@ class SqlBuilder {
       return $this;
 
     $this->toStringFunc = 'buildSelect';
-
     $this->select = $select ? $select : '*';
     return $this;
   }

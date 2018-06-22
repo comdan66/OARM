@@ -1,0 +1,2457 @@
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4ok 4.7 SQL：SHOW COLUMNS FROM `User` Value：ok 0.5 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：ok 3.0 SQL：SHOW COLUMNS FROM `Article` Value：ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10ok 0.2 SQL：SET NAMES ? Value：utf8mb4ok 1.8 SQL：SHOW COLUMNS FROM `User` Value：ok 0.4 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：ok 1.8 SQL：SHOW COLUMNS FROM `Article` Value：ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.9 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.9 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.4 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.9 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 2.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.8 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 2.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 2.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 1.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.2 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.9 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id,userId FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id,userId FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id,userId FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.8 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.5 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id,userId FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.8 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.2 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id,userId FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.9 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 2.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id,userId FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) LIMIT 0, 1 Value：1,2,3,4,5,6,7,8,9,10
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 1.9 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id,userId FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) LIMIT 0, 1 Value：1,2,3,4,5,6,7,8,9,10
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id,userId FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id,userId FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.8 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 2.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id,userId FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 1.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：2
+ok 0.3 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：3
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：2
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：2
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 3.1 SQL：SET NAMES ? Value：utf8mb4
+ok 1.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 3.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` WHERE id IN (?,?,?) Value：1,2,3
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 1.8 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` WHERE id IN (?,?,?) Value：1,2,3
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 1.7 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` WHERE id IN (?,?,?) Value：1,2,3
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 2.1 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.6 SQL：SELECT * FROM `User` WHERE id IN (?,?,?) Value：1,2,3
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 1.9 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` WHERE id IN (?,?,?) Value：1,2,3
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.5 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 1.8 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT name FROM `User` WHERE id IN (?,?,?) Value：1,2,3
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.5 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 2.4 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT name,id FROM `User` WHERE id IN (?,?,?) Value：1,2,3
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 1.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.2 SQL：SELECT name,id FROM `User` WHERE id IN (?,?,?) Value：1,2,3
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 4.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 2.2 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT name,id FROM `User` WHERE id IN (?,?,?) Value：1,2,3
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 1.9 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT name,id FROM `User` WHERE id IN (?,?,?) Value：1,2,3
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 2.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT name,id FROM `User` WHERE id IN (?,?,?) Value：1,2,3
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 2.4 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT name,id FROM `User` WHERE id IN (?,?,?) Value：1,2,3
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 2.3 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.5 SQL：SELECT * FROM `User` WHERE id IN (?,?,?) Value：1,2,3
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 1.7 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` WHERE id IN (?,?,?) Value：1,2,3
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 1.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 1.4 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` WHERE id IN (?,?,?) Value：1,2,3
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 2.3 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` WHERE id IN (?,?,?) Value：1,2,3
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 1.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 2.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` WHERE id IN (?,?,?) Value：1,2,3
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 1.4 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` WHERE id IN (?,?,?) Value：1,2,3
+ok 0.3 SQL：SET NAMES ? Value：utf8mb4
+ok 4.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.5 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 2.0 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` WHERE id IN (?,?,?) Value：1,2,3
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 3.4 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` WHERE id IN (?,?,?) Value：1,2,3
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 1.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 1.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` WHERE id IN (?,?,?) Value：1,2,3
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 1.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.6 SQL：SELECT * FROM `User` WHERE id IN (?,?,?) Value：1,2,3
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 4.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 1.9 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` WHERE id IN (?,?,?) Value：1,2,3
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 3.3 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.2 SQL：SELECT * FROM `User` WHERE id IN (?,?,?) Value：1,2,3
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 3.4 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` WHERE id IN (?,?,?) Value：1,2,3
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 1.8 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.2 SQL：SELECT * FROM `User` WHERE id IN (?,?,?) Value：1,2,3
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 1.9 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` WHERE id IN (?,?,?) Value：1,2,3
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 2.4 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.7 SQL：SELECT * FROM `User` WHERE id IN (?,?,?) Value：1,2,3
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 1.7 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` WHERE id IN (?,?,?) Value：1,2,3
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 1.8 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` WHERE id IN (?,?,?) Value：1,2,3
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 2.0 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` WHERE id IN (?,?,?) Value：1,2,3
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 7.2 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` WHERE id IN (?,?,?) Value：1,2,3
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 3.8 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` WHERE id IN (?,?,?) Value：1,2,3
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 1.9 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` WHERE id IN (?,?,?) Value：1,2,3
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 1.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 1.7 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` WHERE id IN (?,?,?) Value：1,2,3
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 2.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` WHERE id IN (?,?,?) Value：1,2,3
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 1.8 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` WHERE id IN (?,?,?) Value：1,2,3
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 1.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.7 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 1.7 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` WHERE id IN (?,?,?,?) Value：1,2,3,0
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 2.1 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT name,id FROM `User` WHERE id IN (?,?,?,?) Value：1,2,3,0
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 1.8 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` WHERE id IN (?,?,?,?) Value：1,2,3,0
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.5 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 1.9 SQL：SHOW COLUMNS FROM `User` Value：
+ok 1.9 SQL：SELECT * FROM `User` WHERE id IN (?,?,?,?) Value：1,BBB,CCC,
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.6 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 3.1 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.5 SQL：SELECT * FROM `User` WHERE name IN (?,?,?,?) Value：1,2,3,0
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.6 SQL：SELECT * FROM `Article` LIMIT 0, 10 Value：
+ok 2.9 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.5 SQL：SELECT * FROM `User` WHERE name IN (?,?,?,?) Value：1,2,3,0
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 2.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：1
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：5
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 1.7 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 1.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：1
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：5
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.2 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 1.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：1
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：5
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 3.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.8 SQL：SELECT * FROM `Article` WHERE userId = ? Value：1
+ok 0.4 SQL：SELECT * FROM `Article` WHERE userId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：5
+ok 0.3 SQL：SET NAMES ? Value：utf8mb4
+ok 2.0 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 2.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?) Value：1,2,3,4,5
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.9 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 1.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?) Value：1,2,3,4,5
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 1.8 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.5 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 2.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?) Value：1,2,3,4,5
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.0 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.6 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 2.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?) Value：1,2,3,4,5
+ok 1.9 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.4 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.6 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 2.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?) Value：1,2,3,4,5
+ok 1.5 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.4 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.7 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 2.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?) Value：1,2,3,4,5
+ok 1.6 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.9 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 2.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?) Value：1,2,3,4,5
+ok 1.7 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 1.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?) Value：1,2,3,4,5
+ok 1.7 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 3.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?) Value：1,2,3,4,5
+ok 1.5 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.3 SQL：SET NAMES ? Value：utf8mb4
+ok 2.0 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 1.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?) Value：1,2,3,4,5
+ok 1.3 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.1 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 1.9 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.6 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 2.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：1
+ok 1.6 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：2
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.1 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：3
+ok 0.1 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.1 SQL：SELECT * FROM `Article` WHERE userId = ? Value：4
+ok 0.1 SQL：SELECT * FROM `Article` WHERE userId = ? Value：5
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.0 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 2.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?) Value：1,2,3,4,5
+ok 2.6 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 3.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?) Value：1,2,3,4,5
+ok 1.5 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.1 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 4.1 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 1.7 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 2.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?) Value：1,2,3,4,5
+ok 2.4 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.6 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 1.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?) Value：1,2,3,4,5
+ok 1.8 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.1 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.1 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.1 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.0 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.5 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 1.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?) Value：1,2,3,4,5
+ok 1.6 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 2.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.5 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?) Value：1,2,3,4,5
+ok 1.7 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.3 SQL：SET NAMES ? Value：utf8mb4
+ok 5.0 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 1.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?) Value：1,2,3,4,5
+ok 1.7 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 1.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?) Value：1,2,3,4,5
+ok 2.5 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.3 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 2.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?) Value：1,2,3,4,5
+ok 2.6 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.4 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 2.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：1
+ok 2.5 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：4
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：5
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.2 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 2.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：1
+ok 1.5 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.4 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：4
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：5
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 5.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE userId = ? Value：1
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：2
+ok 0.4 SQL：SELECT * FROM `Article` WHERE userId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：5
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.8 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 1.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?) Value：1,2,3,4,5
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 1.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?) Value：1,2,3,4,5
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 1.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?) Value：1,2,3,4,5
+ok 1.9 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 2.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?) Value：1,2,3,4,5
+ok 2.6 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 1.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：1
+ok 1.9 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.4 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.4 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：4
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：5
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.5 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 1.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：1
+ok 1.4 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?) Value：1,2
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?) Value：3,5,6
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId IN (?) Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：5
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 1.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：1
+ok 1.9 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.4 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：5
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 4.1 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.9 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 2.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.6 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?) Value：1,2,3,4,5
+ok 1.4 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 1.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?) Value：1,2,3,4,5
+ok 1.9 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.5 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.7 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.2 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 1.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?) Value：1,2,3,4,5
+ok 3.1 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.7 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 1.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?) Value：1,2,3,4,5
+ok 1.7 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.5 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.7 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 2.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?) Value：1,2,3,4,5
+ok 1.8 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.8 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 2.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?) Value：1,2,3,4,5
+ok 1.6 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.1 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.1 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.1 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 1.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.5 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 2.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?) Value：1,2,3,4,5
+ok 2.0 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.8 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 1.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?) Value：1,2,3,4,5
+ok 2.8 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.5 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 4.0 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 1.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?) Value：1,2,3,4,5
+ok 1.9 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.6 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 1.8 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 2.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?) Value：1,2,3,4,5
+ok 2.1 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 1.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?) Value：1,2,3,4,5
+ok 3.4 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.8 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 1.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?) Value：1,2,3,4,5
+ok 2.4 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 1.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?) Value：1,2,3,4,5
+ok 1.5 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 1.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?) Value：1,2,3,4,5
+ok 2.8 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 1.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?) Value：1,2,3,4,5
+ok 2.2 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 1.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：1
+ok 2.0 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.4 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.4 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：5
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 1.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：1
+ok 2.7 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：5
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 2.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：1
+ok 1.5 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：5
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.1 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 2.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.9 SQL：SELECT * FROM `Article` WHERE userId = ? Value：1
+ok 1.9 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：5
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.0 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 1.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：1
+ok 1.8 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：2
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.4 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：5
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 2.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：1
+ok 1.6 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：5
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 2.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.5 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?) Value：1,2,3,4,5
+ok 2.0 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 2.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?) Value：1,2,3,4,5
+ok 1.9 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.4 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.8 SQL：SELECT * FROM `User` LIMIT 0, 5 Value：
+ok 2.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?) Value：1,2,3,4,5
+ok 1.8 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.3 SQL：SET NAMES ? Value：utf8mb4
+ok 5.0 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 3.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.5 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 3.1 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.9 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 2.2 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 1.8 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.0 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 3.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 1.8 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 1.7 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.3 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：1
+ok 2.1 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：3
+ok 0.1 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：5
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：6
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：7
+ok 0.4 SQL：SELECT * FROM `Article` WHERE userId = ? Value：8
+ok 0.4 SQL：SELECT * FROM `Article` WHERE userId = ? Value：9
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：10
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 3.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.5 SQL：SELECT * FROM `Article` WHERE userId = ? Value：1
+ok 2.5 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：7
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：8
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：9
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：10
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 4.1 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：1
+ok 1.7 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：6
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：7
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：8
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：9
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：10
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 2.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：1
+ok 1.6 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：7
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：8
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：9
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：10
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.5 SQL：SELECT * FROM `Article` WHERE userId = ? Value：1
+ok 1.3 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：2
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：5
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：6
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：7
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：8
+ok 0.1 SQL：SELECT * FROM `Article` WHERE userId = ? Value：9
+ok 0.1 SQL：SELECT * FROM `Article` WHERE userId = ? Value：10
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：1
+ok 1.3 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：7
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：8
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：9
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：10
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.5 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：1
+ok 1.5 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：7
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：8
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：9
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：10
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：1
+ok 2.1 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.4 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.4 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.6 SQL：SELECT * FROM `Article` WHERE userId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：7
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：8
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：9
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：10
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 2.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：1
+ok 2.3 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.1 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：7
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：8
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：9
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：10
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.8 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 2.7 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 4.1 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 4.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 1.6 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.5 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 2.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 1.9 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.5 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 1.9 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 2.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 1.6 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 1.8 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.7 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.9 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 1.7 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 5.0 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 1.9 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 1.6 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.8 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 3.4 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 1.6 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 5.7 SQL：SHOW COLUMNS FROM `User` Value：
+ok 3.4 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 3.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 1.7 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 2.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 1.8 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 1.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.2 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 2.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 1.5 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.4 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.0 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 4.1 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.9 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.9 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 2.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：1
+ok 1.7 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：7
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：8
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：9
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：10
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.9 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.2 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 1.9 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 1.3 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.2 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 1.6 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.2 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 2.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 2.0 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.3 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.3 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.4 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：2
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 1.4 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.2 SQL：SELECT * FROM `User` WHERE id IN (?,?) Value：1,2
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 2.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 1.7 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.3 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 1.7 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.5 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 1.6 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.2 SQL：SELECT * FROM `User` WHERE id IN (?,?) Value：1,2
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：1
+ok 1.5 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.3 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.3 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：7
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：8
+ok 0.1 SQL：SELECT * FROM `Article` WHERE userId = ? Value：9
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：10
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.8 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.6 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：1
+ok 1.6 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：2
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：4
+ok 0.4 SQL：SELECT * FROM `Article` WHERE userId = ? Value：5
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：7
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：8
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：9
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：10
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：1
+ok 1.7 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.3 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：4
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：7
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：8
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：9
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：10
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.5 SQL：SELECT * FROM `Article` WHERE userId = ? Value：1
+ok 2.1 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.4 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.6 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.3 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：7
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：8
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：9
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：10
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.0 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 1.9 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.3 SQL：SELECT * FROM `User` WHERE id IN (?,?) Value：1,2
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.7 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 1.7 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.2 SQL：SELECT * FROM `User` WHERE id IN (?,?) Value：1,2
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 1.8 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.3 SQL：SELECT * FROM `User` WHERE id IN (?,?) Value：1,2
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 2.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 1.3 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.2 SQL：SELECT * FROM `User` WHERE id IN (?,?) Value：1,2
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：1
+ok 1.5 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.3 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.3 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：3
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：4
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：7
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：8
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：9
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：10
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：1
+ok 1.8 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.3 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.3 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.4 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.3 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：5
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：7
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：8
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：9
+ok 0.1 SQL：SELECT * FROM `Article` WHERE userId = ? Value：10
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 2.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：1
+ok 4.8 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.1 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.1 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.1 SQL：SELECT * FROM `Article` WHERE userId = ? Value：2
+ok 0.1 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.1 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.1 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：2
+ok 0.1 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.1 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.1 SQL：SELECT * FROM `Article` WHERE userId = ? Value：3
+ok 0.1 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.1 SQL：SELECT * FROM `Article` WHERE userId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：5
+ok 0.1 SQL：SELECT * FROM `Article` WHERE userId = ? Value：6
+ok 0.1 SQL：SELECT * FROM `Article` WHERE userId = ? Value：7
+ok 0.1 SQL：SELECT * FROM `Article` WHERE userId = ? Value：8
+ok 0.1 SQL：SELECT * FROM `Article` WHERE userId = ? Value：9
+ok 0.1 SQL：SELECT * FROM `Article` WHERE userId = ? Value：10
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.9 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：1
+ok 1.6 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.3 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.4 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.6 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.3 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：3
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：4
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：5
+ok 0.1 SQL：SELECT * FROM `Article` WHERE userId = ? Value：6
+ok 0.1 SQL：SELECT * FROM `Article` WHERE userId = ? Value：7
+ok 0.1 SQL：SELECT * FROM `Article` WHERE userId = ? Value：8
+ok 0.1 SQL：SELECT * FROM `Article` WHERE userId = ? Value：9
+ok 0.1 SQL：SELECT * FROM `Article` WHERE userId = ? Value：10
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：1
+ok 3.0 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：1
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.2 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：2
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：3
+ok 0.1 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：5
+ok 0.1 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：2
+ok 0.1 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：6
+ok 0.1 SQL：SELECT * FROM `User` WHERE id = ? LIMIT 0, 1 Value：1
+ok 0.1 SQL：SELECT * FROM `Article` WHERE userId = ? Value：3
+ok 0.1 SQL：SELECT * FROM `Comment` WHERE articleId = ? Value：4
+ok 0.1 SQL：SELECT * FROM `Article` WHERE userId = ? Value：4
+ok 0.1 SQL：SELECT * FROM `Article` WHERE userId = ? Value：5
+ok 0.1 SQL：SELECT * FROM `Article` WHERE userId = ? Value：6
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId = ? Value：7
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId = ? Value：8
+ok 0.1 SQL：SELECT * FROM `Article` WHERE userId = ? Value：9
+ok 0.1 SQL：SELECT * FROM `Article` WHERE userId = ? Value：10
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.8 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 2.6 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.4 SQL：SELECT * FROM `User` WHERE id IN (?,?) Value：1,2
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.2 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 2.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 2.8 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.3 SQL：SELECT * FROM `User` WHERE id IN (?,?) Value：1,2
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.9 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 1.5 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.2 SQL：SELECT * FROM `User` WHERE id IN (?,?) Value：1,2
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 2.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 3.3 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.3 SQL：SELECT * FROM `User` WHERE id IN (?,?) Value：1,2
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 4.2 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 2.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 1.5 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.2 SQL：SELECT * FROM `User` WHERE id IN (?,?) Value：1,2
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 2.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 2.6 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.3 SQL：SELECT * FROM `User` WHERE id IN (?,?) Value：1,2
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 2.4 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.2 SQL：SELECT * FROM `User` WHERE id IN (?,?) Value：1,2
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 2.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 1.9 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.3 SQL：SELECT * FROM `User` WHERE id IN (?,?) Value：1,2
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.5 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 3.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 1.8 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.3 SQL：SELECT * FROM `User` WHERE id IN (?,?) Value：1,2
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 2.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 1.6 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.2 SQL：SELECT * FROM `User` WHERE id IN (?,?) Value：1,2
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 1.5 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.2 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.2 SQL：SELECT * FROM `User` WHERE id IN (?,?) Value：1,2
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 2.0 SQL：SHOW COLUMNS FROM `Comment` Value：
+ok 0.3 SQL：SELECT * FROM `Comment` WHERE articleId IN (?,?,?,?,?,?) Value：1,2,3,4,5,6
+ok 0.2 SQL：SELECT * FROM `User` WHERE id IN (?,?) Value：1,2
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.2 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.2 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 2.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.3 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.2 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.6 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 2.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 3.9 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) GROUP BY userId Value：1,2,3,4,5,6,7,8,9,10
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 1.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.2 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.3 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 4.3 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 2.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.7 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.2 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 2.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 1.4 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) GROUP BY userId Value：1,2,3,4,5,6,7,8,9,10
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 1.8 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) GROUP BY userId Value：1,2,3,4,5,6,7,8,9,10
+ok 0.4 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 1.9 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) GROUP BY userId Value：1,2,3,4,5,6,7,8,9,10
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.9 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 1.8 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) GROUP BY userId Value：1,2,3,4,5,6,7,8,9,10
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.6 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 2.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.9 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.6 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 2.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.8 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 2.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.1 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.5 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 6.0 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 2.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.8 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 3.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.9 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 2.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.0 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 2.7 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) GROUP BY userId Value：1,2,3,4,5,6,7,8,9,10
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.4 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 3.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 2.4 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) GROUP BY userId Value：1,2,3,4,5,6,7,8,9,10
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.9 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.5 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 2.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 2.1 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) GROUP BY userId Value：1,2,3,4,5,6,7,8,9,10
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 1.6 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) GROUP BY userId Value：1,2,3,4,5,6,7,8,9,10
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.0 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 5.5 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.1 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 2.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.0 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 2.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.9 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 2.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.1 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 2.4 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) GROUP BY userId Value：1,2,3,4,5,6,7,8,9,10
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.7 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 2.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.8 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 2.0 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) GROUP BY userId Value：1,2,3,4,5,6,7,8,9,10
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.5 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 5.7 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 2.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.7 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.8 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.2 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 1.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) ORDER BY id DESC Value：1,2,3,4,5,6,7,8,9,10
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` LIMIT 0, 10 Value：
+ok 2.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE userId IN (?,?,?,?,?,?,?,?,?,?) Value：1,2,3,4,5,6,7,8,9,10
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.7 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.2 SQL：SELECT * FROM `User` LIMIT 0, 1 Value：
+ok 1.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE userId IN (?) Value：1
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.1 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.5 SQL：SELECT * FROM `User` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.0 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.9 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 1.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.8 SQL：SHOW COLUMNS FROM `User` Value：
+ok 1.4 SQL：SELECT * FROM `User` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 1.7 SQL：SHOW COLUMNS FROM `User` Value：
+ok 5.3 SQL：SELECT * FROM `User` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `User` Value：
+ok 1.3 SQL：SELECT COUNT(*) FROM `User` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT COUNT(*) FROM `User` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.9 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT COUNT(*) FROM `User` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT COUNT(*) FROM `User` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.0 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT COUNT(*) FROM `User` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.9 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT COUNT(*) FROM `User` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.8 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.8 SQL：SELECT COUNT(*) FROM `User` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT COUNT(*) FROM `User` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT COUNT(*) FROM `User` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT COUNT(*) FROM `User` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 1.9 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT COUNT(*) FROM `User` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.0 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT COUNT(*) FROM `User` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 1.9 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT COUNT(*) FROM `User` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.9 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.2 SQL：SELECT COUNT(*) FROM `User` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.0 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT COUNT(*) FROM `User` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.2 SQL：SELECT COUNT(*) FROM `User` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.1 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT COUNT(*) FROM `User` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT COUNT(*) FROM `User` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.7 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.2 SQL：SELECT COUNT(*) FROM `User` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.9 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT COUNT(*) FROM `User` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.9 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT COUNT(*) FROM `User` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 4.4 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT COUNT(*) FROM `User` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.2 SQL：SELECT COUNT(*) FROM `User` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.3 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT COUNT(*) FROM `User` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT COUNT(*) FROM `User` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.2 SQL：SELECT COUNT(*) FROM `User` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.0 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT COUNT(*) FROM `User` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.0 SQL：SHOW COLUMNS FROM `User` Value：
+ok 3.1 SQL：SELECT COUNT(*) FROM `User` WHERE id <   10 LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT COUNT(*) FROM `User` WHERE id < 10 LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 4.1 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT COUNT(*) FROM `User` WHERE id < 10 LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT COUNT(*) FROM `User` WHERE id < 10 LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 4.1 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT COUNT(*) FROM `User` WHERE id < 10 LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.5 SQL：SELECT COUNT(*) FROM `User` WHERE id < 10 LIMIT 0, 1 Value：
+ok 0.3 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT COUNT(*) FROM `User` WHERE id < 10 LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT COUNT(*) FROM `User` WHERE id < 10 LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.8 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.2 SQL：SELECT COUNT(*) FROM `User` WHERE id < 10 LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT COUNT(*) FROM `User` WHERE id < 10 LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT COUNT(*) FROM `User` WHERE id < 10 LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 1.7 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.2 SQL：SELECT COUNT(*) FROM `User` WHERE id < 10 LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 4.1 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT COUNT(*) FROM `User` WHERE id < 10 LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT COUNT(*) FROM `User` WHERE id < 10 LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT COUNT(*) FROM `User` WHERE id < 10 LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT COUNT(*) FROM `User` WHERE id < 10 LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.0 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT COUNT(*) FROM `User` WHERE id < 10 LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT COUNT(*) FROM `User` WHERE id < 10 LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT COUNT(*) FROM `User` WHERE id < 10 LIMIT 0, 1 Value：
+ok 0.3 SQL：SET NAMES ? Value：utf8mb4
+ok 2.6 SQL：SELECT * FROM User Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 1.3 SQL：SELECT * FROM User Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+no 0.5 SQL：INSERT Comment(articleId,title,userId) values(?,?,?) Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.7 SQL：INSERT Comment(articleId,title,userId) values(?,?,?) Value：1,2,3
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 1.3 SQL：INSERT Comment(`articleId`,`title`,`userId`) values(?,?,?) Value：1,2,3
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 1.8 SQL：INSERT Comment(`articleId`,`title`,`userId`) values(?,?,?) Value：1,2,3
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.0 SQL：INSERT Comment(`articleId`,`title`,`userId`) values(?,?,?) Value：1,2,3
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.0 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.5 SQL：SELECT * FROM `User` WHERE id < 10 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 4.2 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` WHERE id < 10 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` WHERE id < 10 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 5.7 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` WHERE id < 10 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.6 SQL：SELECT * FROM `User` WHERE id < 10 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.8 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` WHERE id < 10 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 4.0 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` WHERE id < 10 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.1 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` WHERE id < 10 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 4.3 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` WHERE id < 10 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` WHERE id < 10 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.1 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.5 SQL：SELECT * FROM `User` WHERE id < 10 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.2 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` WHERE id < 10 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.9 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` WHERE id < 10 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` WHERE id < 10 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.2 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` WHERE id < 10 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` WHERE id < 10 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.7 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` WHERE id < 10 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.9 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` WHERE id < 10 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` WHERE id < 10 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.8 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` WHERE id < 10 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.2 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.4 SQL：SELECT * FROM `User` WHERE id < 10 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` WHERE id < 10 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 1.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.3 SQL：SELECT * FROM `User` WHERE id < 10 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.5 SQL：SELECT * FROM `User` WHERE id < 10 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.8 SQL：SELECT * FROM `User` WHERE id < 10 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 1.8 SQL：SHOW COLUMNS FROM `User` Value：
+ok 1.7 SQL：SELECT * FROM `User` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.9 SQL：SELECT * FROM `User` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.8 SQL：SELECT * FROM `User` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 1.3 SQL：SELECT * FROM `User` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.9 SQL：SELECT * FROM `User` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 5.0 SQL：SELECT * FROM `User` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.8 SQL：SELECT * FROM `User` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.9 SQL：SHOW COLUMNS FROM `User` Value：
+ok 1.0 SQL：SELECT * FROM `User` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `User` Value：
+ok 1.1 SQL：SELECT * FROM `User` Value：
+ok 0.3 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `User` Value：
+ok 1.1 SQL：SELECT * FROM `User` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 1.2 SQL：SELECT * FROM `User` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.7 SQL：SELECT * FROM `User` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.9 SQL：SELECT * FROM `User` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.9 SQL：SELECT * FROM `User` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.8 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.6 SQL：SELECT id FROM `User` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 1.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.5 SQL：SELECT * FROM `Article` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.0 SQL：SHOW COLUMNS FROM `User` Value：
+ok 1.0 SQL：SELECT * FROM `User` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.8 SQL：SELECT * FROM `User` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.9 SQL：SELECT * FROM `User` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.8 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.8 SQL：SELECT * FROM `User` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.9 SQL：SELECT * FROM `User` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.9 SQL：SELECT * FROM `User` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.8 SQL：SELECT * FROM `User` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.8 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.8 SQL：SELECT * FROM `User` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `User` Value：
+ok 1.6 SQL：SELECT * FROM `User` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.1 SQL：SHOW COLUMNS FROM `User` Value：
+ok 1.2 SQL：SELECT * FROM `User` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 1.0 SQL：SELECT * FROM `User` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `User` Value：
+ok 4.9 SQL：SELECT * FROM `User` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 1.8 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.9 SQL：SELECT * FROM `User` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.8 SQL：SELECT * FROM `User` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 1.7 SQL：SELECT * FROM `User` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.9 SQL：SELECT * FROM `User` Value：
+ok 0.3 SQL：SET NAMES ? Value：utf8mb4
+ok 4.1 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.9 SQL：SELECT * FROM `User` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `User` Value：
+ok 1.0 SQL：SELECT * FROM `User` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.0 SQL：SHOW COLUMNS FROM `User` Value：
+ok 1.2 SQL：SELECT * FROM `User` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.8 SQL：SELECT * FROM `User` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.0 SQL：SHOW COLUMNS FROM `User` Value：
+ok 1.0 SQL：SELECT * FROM `User` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 1.8 SQL：SHOW COLUMNS FROM `User` Value：
+ok 1.2 SQL：SELECT * FROM `User` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.7 SQL：SELECT * FROM `User` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.2 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.9 SQL：SELECT * FROM `User` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 1.8 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.9 SQL：SELECT * FROM `User` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 5.1 SQL：SELECT * FROM `User` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.8 SQL：SHOW COLUMNS FROM `User` Value：
+ok 4.6 SQL：SELECT * FROM `User` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 1.7 SQL：SHOW COLUMNS FROM `User` Value：
+ok 1.2 SQL：SELECT * FROM `User` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.8 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.8 SQL：SELECT * FROM `User` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `User` Value：
+ok 1.0 SQL：SELECT * FROM `User` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `User` Value：
+ok 0.8 SQL：SELECT * FROM `User` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.0 SQL：INSERT Comment(`articleId`,`title`,`userId`) values(?,?,?) Value：1,2,3
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.4 SQL：INSERT Comment(`articleId`,`title`,`userId`) values(?,?,?) Value：1,2,3
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 0.4 SQL：select * from Article Value：

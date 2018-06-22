@@ -68,10 +68,39 @@ class Benchmark {
   }
 }
 
+define('PATH_LOG', __DIR__ . '/log/');
+
 class Log {
+  private static $extension = '.log';
+  private static $permissions = 0777;
+  private static $dateFormat = 'Y-m-d H:i:s';
+  private static $fopens = [];
+
+  public static function message($text, $prefix = 'log-') {
+    if (!(is_dir(PATH_LOG) && is_writable(PATH_LOG)))
+      return false;
+
+    $newfile = !file_exists($path = PATH_LOG . $prefix . date('Y-m-d') . self::$extension);
+
+    if (!isset(self::$fopens[$path]))
+      if (!$fopen = @fopen($path, 'ab'))
+        return false;
+      else
+        self::$fopens[$path] = $fopen;
+
+    for($written = 0, $length = strlen($text); $written < $length; $written += $result)
+      if (($result = fwrite(self::$fopens[$path], substr($text, $written))) === false)
+        break;
+
+    $newfile && @chmod($path, self::$permissions);
+
+    return is_int($result);
+  }
+
+
   public static function query($valid, $time, $sql, $values) {
     // echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
-    // var_dump ($valid, $time, ''.$sql, $values);
+    self::message (($valid ? 'ok' : 'no') . ' ' . $time . ' SQL：' . $sql . ' Value：'. implode(',', $values) . "\n");
     // echo "<hr/>";
     // exit ();
   }
@@ -115,19 +144,78 @@ Benchmark::markStar('整體');
 
 // $article = M\Article::one(['where' => 'id = 1']);
 
-// echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
+echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
 // var_dump ($article->user->name);
 // exit ();
 
-$users = \M\User::all(['limit' => 10, 'include' => ['articles'], 'where' => ['id IN (?)', [] ]]);
+// $users = \M\User::all(['readonly' => true]);
+// // $users[0]->setIsReadonly(false);
+// echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
+// var_dump ($users[0]);
+// // exit ();
+// // echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
+// // var_dump (spl_object_hash($users[0]));
+// // var_dump (spl_object_hash($users[0]));
+// exit ();
 
+$objs = \M\Model::query('select * from Article');
+echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
+var_dump ($objs);
+exit ();
+
+// $objs = \M\Model::query('INSERT Comment(`articleId`,`title`,`userId`) values(?,?,?)', [1,2,3]);
+// echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
+// var_dump ($objs);
+// exit ();
 // echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
 // var_dump ($users);
 // exit ();
+// foreach ($users as $user) {
+//   echo "User ID:" . $user->id . "<br/>";
+//   echo $user->article ? " ===> Article ID:" . $user->article->id . "<br/>" : '';
 
-foreach ($users as $user) {
-  echo $user->id .' - '. count($user->articles) . "<br>";
-}
+  // foreach ($user->articles as $article) {
+  //   echo " ===> Article ID:" . $article->id . "<br/>";
+
+  //   foreach ($article->comments as $comment) {
+  //     echo " ------> Commit ID:" . $comment->id . "<br/>";
+  //     echo " ------> User ID:" . $comment->user->id . "<br/>";
+  //     // foreach ( as $key => $value) {
+  //     //   # code...
+  //     // }
+  //   }
+
+  //   echo "<br/>";
+  // }
+  // echo "<br/>";
+//   echo "<br/>";
+// }
+
+// $articles = \M\Article::all(['limit' => 10, 'include' => ['users']]);
+
+// foreach ($articles as $article) {
+//   echo $article->id .' - ';
+//   var_dump(count($article->users));
+//   echo "<br>";
+// }
+
+
+
+
+
+// exit();
+
+// $users = \M\User::all(['limit' => 10, 'include' => ['article']]);
+
+// // echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
+// // var_dump ($users);
+// // exit ();
+// echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
+// foreach ($users as $user) {
+//   echo $user->id .' - ';
+//   var_dump($user->article->id);
+//   echo "<br>";
+// }
 
 // var_dump ();
 // exit (); 

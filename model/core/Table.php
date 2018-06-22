@@ -106,30 +106,35 @@ class Table {
   }
 
   public function findBySql($sql, $values = [], $readonly = false, $includes = []) {
-    $list = [];
-
     $sth = Connection::instance()->query($sql, $values);
+    $tableName = $this->tableName;
+    $className = $this->className;
+    
+    $objs = array_map(function ($row) use ($tableName, $className, $readonly) {
+      $obj = new $this->className($row);
+      return $obj->setIsNew(false)
+                 ->setTableName($tableName)
+                 ->setClassName($className)
+                 ->setIsReadonly($readonly);
+    }, $sth->fetchAll());
 
-    while ($row = $sth->fetch()) {
-      $model = new $this->className($row);
-      $model->setIsNew(false);
-      $model->setTableName($this->tableName);
-      $model->setClassName($this->className);
-      $model->setIsReadonly($readonly);
-      // $model->setIncludes($includes);
-      // $includes
-      // $includes && 
-      array_push($list, $model);
+    foreach ($includes as $name => $include) {
+      if (is_numeric($name)) {
+        $name = $include;
+        $include = [];
+
+        if (($i = strpos($name, '.')) !== false) {
+          $tmp = substr($name, $i + 1);
+          $name = substr($name, 0, $i);
+          $include = ['include' => $tmp];
+        }
+      }
+      foreach (['hasOne', 'hasMany', 'belongToOne', 'belongToMany'] as $val)
+        if (isset($className::$$val) && ($tmp = $className::$$val) && isset($tmp[$name]))
+          $className::relations($val, array_merge($tmp[$name], $include), $objs, $name);
     }
 
-    foreach ($includes as $include) {
-      echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
-      var_dump ($include);
-      exit ();
-    }
-
-
-    return $list;
+    return $objs;
   }
 
 }

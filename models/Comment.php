@@ -9,7 +9,7 @@ class Comment extends Model {
   static $hasMany = [
   ];
 
-  static $belongsTo = [
+  static $belongToOne = [
     'user' => ['model' => 'User'],
     'article' => ['model' => 'Article'],
   ];

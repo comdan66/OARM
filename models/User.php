@@ -4,11 +4,11 @@ namespace M;
 
 class User extends Model {
   static $hasOne = [
+    'article' => ['model' => 'Article'],
   ];
   
   static $hasMany = [
-    // 'articles' => 'Article',
-    'articles' => ['model' => 'Article', 'select' => 'id'],
+    // 'articles' => ['model' => 'Article'],
   ];
 
   static $belongsTo = [

@@ -9,13 +9,18 @@ class Article extends Model {
   ];
   
   static $hasMany = [
-    'tags'        => ['model' => 'Tag', 'by' => 'articleMappings'],
     'comments'    => ['model' => 'Comment'],
+
+    'tags'        => ['model' => 'Tag', 'by' => 'articleMappings'],
     'tagMappings' => ['model' => 'TagArticleMapping'],
   ];
 
-  static $belongsTo = [
-    'user' => ['model' => 'User'],
+  static $belongToOne = [
+    // 'users' => ['model' => 'User', 'select' => 'name'],
+  ];
+
+  static $belongToMany = [
+    'users' => ['model' => 'User', 'primaryKey' => 'name'],
   ];
 
   static $uploaders = [
