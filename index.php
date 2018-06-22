@@ -1,7 +1,6 @@
 <?php
 date_default_timezone_set('Asia/Taipei');
 
-
 include 'model/Model.php';
 
 function gg () {

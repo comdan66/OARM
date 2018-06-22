@@ -2455,3 +2455,11 @@ ok 0.2 SQL：SET NAMES ? Value：utf8mb4
 ok 2.4 SQL：INSERT Comment(`articleId`,`title`,`userId`) values(?,?,?) Value：1,2,3
 ok 0.1 SQL：SET NAMES ? Value：utf8mb4
 ok 0.4 SQL：select * from Article Value：
+ok 0.3 SQL：SET NAMES ? Value：utf8mb4
+ok 1.6 SQL：select * from Article Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.3 SQL：select * from Article Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 0.6 SQL：select * from Article Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 0.6 SQL：select * from Article Value：

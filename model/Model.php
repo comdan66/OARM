@@ -354,7 +354,10 @@ Class Model {
   }
 
   public static function query($sql, $values = []) {
-    $sth = \_M\Connection::instance()->query($sql, $values);
+    if (!$sql = trim($sql))
+      return [];
+
+    $sth = \_M\Connection::instance()->query(trim($sql), $values);
     echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
     var_dump ($sth->fetchAll());
     exit ();

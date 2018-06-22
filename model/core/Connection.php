@@ -42,13 +42,13 @@ class Connection {
     return $this;
   }
   
-  public function query($sql, $vals = []) {
+  public function query($sql, $vals = [], $fetchModel = PDO::FETCH_ASSOC) {
 
     try {
       $sth = $this->connection->prepare((string)$sql);
       $sth || Config::error('執行 Connection prepare 失敗！');
 
-      $sth->setFetchMode(PDO::FETCH_OBJ);
+      $sth->setFetchMode($fetchModel);
 
       $this->execute($sth, $sql, $vals) || Config::error('執行 Connection execute 失敗！');
     } catch (PDOException $e) {
