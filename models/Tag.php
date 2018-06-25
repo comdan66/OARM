@@ -3,6 +3,8 @@
 namespace M;
 
 class Tag extends Model {
+  // static $tableName ='tags';
+
   static $hasOne = [
   ];
   

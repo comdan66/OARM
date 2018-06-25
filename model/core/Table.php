@@ -25,9 +25,11 @@ class Table {
   private function getMetaData () {
     $this->columns = [];
     $sth = Connection::instance()->query("SHOW COLUMNS FROM " . Config::quoteName($this->tableName));
-    
+    // echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
+    // var_dump ();
+    // exit ();
     while ($row = $sth->fetch())
-      if ($c = Column::create($row))
+      if ($c = Column::create($row, $this->className))
         $this->columns[$c->name] = $c;
 
     return $this;
@@ -115,7 +117,8 @@ class Table {
       return $obj->setIsNew(false)
                  ->setTableName($tableName)
                  ->setClassName($className)
-                 ->setIsReadonly($readonly);
+                 ->setIsReadonly($readonly)
+                 ->setUploadBind();
     }, $sth->fetchAll());
 
     foreach ($includes as $name => $include) {

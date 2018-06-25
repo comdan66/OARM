@@ -9,9 +9,9 @@ class Article extends Model {
   ];
   
   static $hasMany = [
+    'tags'        => ['model' => 'Tag', 'by' => 'articleMappings'],
     'comments'    => ['model' => 'Comment'],
 
-    'tags'        => ['model' => 'Tag', 'by' => 'articleMappings'],
     'tagMappings' => ['model' => 'TagArticleMapping'],
   ];
 
@@ -24,22 +24,22 @@ class Article extends Model {
   ];
 
   static $uploaders = [
-    'file'  => 'ArticleCoverFileUploader',
-    'cover' => 'ArticleCoverImageUploader',
+    'cover'  => 'ArticleCoverFileUploader',
+    // 'cover' => 'ArticleCoverImageUploader',
   ];
 }
 
-// class ArticleCoverImageUploader extends ImageUploader {
-//   public function versions() {
-//     return [
-//       ''          => [],
-//       'w100'      => ['resize', 100, 100, 'width'],
-//       'w1440'     => ['resize', 1440, 1440, 'width'],
-//       'c1200x630' => ['adaptiveResizeQuadrant', 1200, 630, 't'],
-//     ];
-//   }
-// }
+class ArticleCoverImageUploader extends ImageUploader {
+  public function versions() {
+    return [
+      ''          => [],
+      'w100'      => ['resize', 100, 100, 'width'],
+      'w1440'     => ['resize', 1440, 1440, 'width'],
+      'c1200x630' => ['adaptiveResizeQuadrant', 1200, 630, 't'],
+    ];
+  }
+}
 
-// class ArticleCoverFileUploader extends FileUploader {
+class ArticleCoverFileUploader extends FileUploader {
 
-// }
+}

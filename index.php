@@ -1,6 +1,7 @@
 <?php
 date_default_timezone_set('Asia/Taipei');
 
+
 include 'model/Model.php';
 
 function gg () {
@@ -105,7 +106,7 @@ class Log {
   }
   public static function error($error) {
     var_dump ($error);
-    exit ();
+    // exit ();
   }
 }
 
@@ -122,6 +123,11 @@ Benchmark::markStar('整體');
   'password' => '1234',
   'charSet'  => 'utf8mb4',
 ]);
+
+\M\Uploader::setDriver('local');
+\M\Uploader::setBaseDirs(['upload']);
+\M\Uploader::setTmpDir(__DIR__ . '/tmp/');
+\M\Uploader::setBaseUrl('https://qwe.ds/');
 
 // new \M\Article();
 // \M\transaction(function () {
@@ -156,11 +162,35 @@ echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>
 // // var_dump (spl_object_hash($users[0]));
 // // var_dump (spl_object_hash($users[0]));
 // exit ();
+// $tag = \M\Tag::one(['where' => 'id = 1']);
+// echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
+// var_dump ($tag->articleMappings);
+// exit ();
 
-$objs = \M\Model::query('select * from Article');
-echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
-var_dump ($objs);
-exit ();
+$article = \M\Article::one(['select' => 'id, cover']);
+// echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
+// var_dump ($article->cover->url());
+echo $article->cover->putUrl('http://flowers.taipei/imagespace/plant_tree/original/thumb_image_6710831.JPG');
+// $article->cover = 'sss';
+
+// echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
+// var_dump ($article->save());
+// exit ();
+
+//   echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
+// foreach ($articles as $article) {
+//   echo $article->id . '<br>';
+//   array_map(function ($t) {
+//     echo $t->name . "<br/>";
+//   }, $article->tags);
+//   echo '<hr>';
+// }
+// exit ();
+
+// $objs = \M\Model::query('select * from Article');
+// echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
+// var_dump ($objs);
+// exit ();
 
 // $objs = \M\Model::query('INSERT Comment(`articleId`,`title`,`userId`) values(?,?,?)', [1,2,3]);
 // echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';

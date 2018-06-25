@@ -1,0 +1,1410 @@
+ok 0.7 SQL：SET NAMES ? Value：utf8mb4
+ok 2.6 SQL：select * from Article Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 1.2 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 2.0 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 1.9 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 1.4 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.8 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.6 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 5.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 1.7 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.6 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.6 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 4.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 1.9 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.4 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 1.6 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 1.2 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.6 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 1.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.6 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.3 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 5.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.6 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.3 SQL：SELECT `Tag`.* FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.id = `TagArticleMapping`.tag_id) WHERE `articleId`=1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 4.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.3 SQL：SELECT `Tag`.* FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.id = `TagArticleMapping`.tag_id) WHERE `articleId`=1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.3 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.2 SQL：SELECT `Tag`.* FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.id = `TagArticleMapping`.TagId) WHERE `articleId`=1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.3 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.4 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 4.2 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.3 SQL：SELECT `Tag`.* FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.id = `TagArticleMapping`.TagId) WHERE `articleId`=1 Value：
+ok 1.6 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.2 SQL：SELECT `Tag`.* FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.id = `TagArticleMapping`.TagId) WHERE `articleId`=1 Value：
+ok 1.5 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.3 SQL：SELECT `Tag`.* FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.id = `TagArticleMapping`.TagId) WHERE `articleId`=1 Value：
+ok 1.5 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.2 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.3 SQL：SELECT * FROM `Tag` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.3 SQL：SELECT * FROM `Tag` WHERE id = 1 LIMIT 0, 1 Value：
+ok 2.5 SQL：SHOW COLUMNS FROM `TagArticleMapping` Value：
+ok 0.2 SQL：SELECT * FROM `TagArticleMapping` WHERE tagId = ? Value：1
+ok 0.4 SQL：SET NAMES ? Value：utf8mb4
+ok 1.6 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.3 SQL：SELECT * FROM `Tag` WHERE id = 1 LIMIT 0, 1 Value：
+ok 1.9 SQL：SHOW COLUMNS FROM `TagArticleMapping` Value：
+ok 0.3 SQL：SELECT * FROM `TagArticleMapping` WHERE articleId = ? Value：1
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 1.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.3 SQL：SELECT `Tag`.* FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.id = `TagArticleMapping`.articleId) WHERE `articleId`=1 Value：
+ok 2.1 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.4 SQL：SELECT `Tag`.* FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.id = `TagArticleMapping`.articleId) WHERE `articleId`=1 Value：
+ok 2.0 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.6 SQL：SELECT `Tag`.* FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.id = `TagArticleMapping`.articleId) WHERE `articleId`=1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.2 SQL：SELECT `Tag`.* FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.id = `TagArticleMapping`.articleId) WHERE `TagArticleMapping`.`articleId`=1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.2 SQL：SELECT `Tag`.* FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`articleId`) WHERE `TagArticleMapping`.`articleId`=1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id = 1 LIMIT 0, 1 Value：
+ok 0.3 SQL：SELECT `Tag`.* FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`=1 Value：
+ok 2.3 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 1.3 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.4 SQL：SELECT `Tag`.* FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`=1 Value：
+ok 1.8 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.3 SQL：SELECT `Tag`.* FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`=2 Value：
+ok 0.2 SQL：SELECT `Tag`.* FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`=3 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.3 SQL：SELECT `Tag`.* FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`=1 Value：
+ok 2.2 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.4 SQL：SELECT `Tag`.* FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`=2 Value：
+ok 0.5 SQL：SELECT `Tag`.* FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`=3 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.5 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.4 SQL：SELECT `Tag`.* FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`=1 Value：
+ok 1.8 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.3 SQL：SELECT `Tag`.* FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`=2 Value：
+ok 0.3 SQL：SELECT `Tag`.* FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`=3 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.3 SQL：SELECT `Tag`.* FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`=1 Value：
+ok 1.5 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.2 SQL：SELECT `Tag`.* FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`=2 Value：
+ok 0.2 SQL：SELECT `Tag`.* FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`=3 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 1.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.2 SQL：SELECT `Tag`.* FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`=1 Value：
+ok 1.5 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.3 SQL：SELECT `Tag`.* FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`=2 Value：
+ok 0.2 SQL：SELECT `Tag`.* FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`=3 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.7 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 1.2 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 1.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 4.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.5 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.2 SQL：SELECT `Tag`.* FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.3 SQL：SELECT `Tag`.* FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.3 SQL：SELECT `Tag`.* FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`tagId`IN(?,?,?) Value：1,2,3
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.2 SQL：SELECT `Tag`.* FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`tagId`IN(?,?,?) Value：1,2,3
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 1.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.3 SQL：SELECT `Tag`.* FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`tagId`IN(?,?,?) Value：1,2,3
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.2 SQL：SELECT `Tag`.* FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`tagId`IN(?,?,?) Value：1,2,3
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 1.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.5 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 5.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 1.0 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 4.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.6 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.4 SQL：SELECT `Tag`.* FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`tagId`IN(?,?,?) Value：1,2,3
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 4.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.4 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`tagId`IN(?,?,?) Value：1,2,3
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 1.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.3 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`tagId`IN(?,?,?) Value：1,2,3
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.3 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`id`IN(?,?,?) Value：1,2,3
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.2 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`TagId`IN(?,?,?) Value：1,2,3
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.2 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 4.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.3 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.3 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 0.3 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 1.0 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.6 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 5.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.3 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 1.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.3 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.3 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.2 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.3 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.3 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.3 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.8 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.8 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.5 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.4 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.6 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.5 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.5 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.2 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.3 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.2 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.2 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 2.4 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 1.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.4 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 1.5 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.8 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.5 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 2.5 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.7 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.3 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 2.1 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.5 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.4 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 1.7 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 5.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.3 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 2.9 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 4.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.3 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 2.5 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.2 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 1.6 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 4.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.3 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 2.1 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.8 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.5 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 1.5 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.3 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 1.8 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.3 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 1.5 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.3 SQL：SET NAMES ? Value：utf8mb4
+ok 3.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.3 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 1.7 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.4 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 1.8 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.3 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 3.4 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.3 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 2.5 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.3 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 1.7 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.3 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 1.5 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 1.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.6 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.4 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 1.9 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.3 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 2.6 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.5 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.2 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 2.0 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 5.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.5 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.5 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 3.1 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.3 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 4.6 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.3 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 2.0 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.5 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.4 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 2.0 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.5 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.4 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 2.0 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 5.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` WHERE id <= 3 Value：
+ok 0.3 SQL：SELECT `Tag`.*,TagArticleMapping.articleId FROM `Tag` INNER JOIN `TagArticleMapping` ON(`Tag`.`id` = `TagArticleMapping`.`TagId`) WHERE `TagArticleMapping`.`articleId`IN(?,?,?) Value：1,2,3
+ok 3.8 SQL：SHOW COLUMNS FROM `Tag` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.7 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.5 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.6 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.5 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 4.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 2.6 SQL：UPDATE `Article` SET `updatedAt`=? WHERE id = ? Value：2018-06-25 16:12:06,1
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 4.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 1.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.7 SQL：UPDATE `Article` SET `updatedAt`=?, `cover`=? WHERE id = ? Value：2018-06-25 16:12:52,sss,1
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 4.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 4.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.7 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.3 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 4.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.4 SQL：SET NAMES ? Value：utf8mb4
+ok 2.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.7 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.5 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 4.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 4.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.5 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.4 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.5 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 1.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 1.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.5 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 1.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT * FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 1.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 1.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 1.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.6 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 10.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 4.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.6 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.4 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 5.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 1.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.3 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 1.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 1.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 1.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 1.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 4.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 4.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 1.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.5 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.5 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 2.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.5 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.7 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 4.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 5.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.2 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.6 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.8 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 1.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.4 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 3.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 3.5 SQL：UPDATE `Article` SET `cover`=? WHERE id = ? Value：,1
+ok 1.3 SQL：UPDATE `Article` SET `cover`=? WHERE id = ? Value：5212082f52cd976349ed40fe53408807.jpg,1
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.1 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.6 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.3 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.0 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.3 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.2 SQL：SET NAMES ? Value：utf8mb4
+ok 3.4 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.1 SQL：SET NAMES ? Value：utf8mb4
+ok 2.9 SQL：SHOW COLUMNS FROM `Article` Value：
+ok 0.2 SQL：SELECT id, cover FROM `Article` LIMIT 0, 1 Value：
+ok 0.8 SQL：UPDATE `Article` SET `cover`=? WHERE id = ? Value：,1
+ok 2.2 SQL：UPDATE `Article` SET `cover`=? WHERE id = ? Value：64ebf9e594d97874ee97057081d644a8.jpg,1

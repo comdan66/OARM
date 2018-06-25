@@ -3,6 +3,7 @@
 namespace M;
 
 class TagArticleMapping extends Model {
+  // static $tableName ='devices';
   static $hasOne = [
   ];
   
