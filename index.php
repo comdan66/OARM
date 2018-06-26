@@ -1,7 +1,6 @@
 <?php
 date_default_timezone_set('Asia/Taipei');
 
-
 include 'model/Model.php';
 
 function gg () {
@@ -124,10 +123,16 @@ Benchmark::markStar('整體');
   'charSet'  => 'utf8mb4',
 ]);
 
-\M\Uploader::setDriver('local');
+
+\M\Uploader::setDriver('s3');
 \M\Uploader::setBaseDirs(['upload']);
 \M\Uploader::setTmpDir(__DIR__ . '/tmp/');
-\M\Uploader::setBaseUrl('https://qwe.ds/');
+\M\Uploader::setBaseUrl('http://test.ioa.tw/');
+\M\Uploader::setS3Bucket('test.ioa.tw');
+
+require_once 'S3.php';
+S3::init('', '');
+
 
 // new \M\Article();
 // \M\transaction(function () {
@@ -166,11 +171,13 @@ echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>
 // echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
 // var_dump ($tag->articleMappings);
 // exit ();
+// echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
 
 $article = \M\Article::one(['select' => 'id, cover']);
-// echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
-// var_dump ($article->cover->url());
-echo $article->cover->putUrl('http://flowers.taipei/imagespace/plant_tree/original/thumb_image_6710831.JPG');
+$article->cover->putUrl('http://flowers.taipei/imagespace/plant_tree/original/thumb_image_6710831.JPG');
+var_dump ($article->cover->url());
+
+
 // $article->cover = 'sss';
 
 // echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';

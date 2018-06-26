@@ -68,10 +68,16 @@ if (!function_exists('umaskChmod')) {
 
 
 if (!function_exists('umaskMkdir')) {
-  function umaskMkdir ($pathname, $mode = 0777, $recursive = false) {
+  function umaskMkdir($pathname, $mode = 0777, $recursive = false) {
     $oldmask = umask (0);
     @mkdir ($pathname, $mode, $recursive);
     umask ($oldmask);
+  }
+}
+
+if (!function_exists('getRandomName')) {
+  function getRandomName() {
+    return md5(uniqid(mt_rand(), true));
   }
 }
 

@@ -2,12 +2,14 @@
 
 namespace M;
 
+
 abstract class Uploader {
   protected static $driver = null;
   protected static $baseDirs = ['upload'];
   protected static $tmpDir = null;
-  protected static $baseUrl = '';
-
+  protected static $baseUrl = '/';
+  protected static $s3Bucket = null;
+  
   public static function setDriver($driver) {
     is_string($driver) && self::$driver = $driver;
   }
@@ -22,6 +24,10 @@ abstract class Uploader {
 
   public static function setBaseUrl($baseUrl) {
     is_string($baseUrl) && self::$baseUrl = rtrim($baseUrl, '/') . '/';
+  }
+
+  public static function setS3Bucket($s3Bucket) {
+    is_string($s3Bucket) && self::$s3Bucket = trim($s3Bucket, '/');
   }
 
   public static function bind ($orm, $column) {
@@ -40,6 +46,8 @@ abstract class Uploader {
     is_writable(self::$tmpDir)                                || \_M\Config::error('[Uploader] Tmp 目錄沒有權限寫入。tmpDir：' . self::$tmpDir);
     self::$driver !== null                                    || \_M\Config::error('[Uploader] 尚未設定 Driver 目錄。');
     in_array(self::$driver, ['s3', 'local'])                  || \_M\Config::error('[Uploader] Driver 只允許 s3、local。driver：' . self::$driver);
+    self::$driver == 'local' || class_exists('S3')            || \_M\Config::error('[Uploader] 尚未初始 S3 物件。');
+    self::$driver == 'local' || self::$s3Bucket !== null      || \_M\Config::error('[Uploader] 未給予 S3 Bucket。');
 
     $this->orm = $orm;
     $this->column = $column;
@@ -55,30 +63,11 @@ abstract class Uploader {
   }
 
   public function url($key = '') {
-    $path = $this->path($key);
-
-    switch (Uploader::$driver) {
-      case 'local':
-        return $path ? self::$baseUrl . implode('/', $path) : $this->d4Url();
-        break;
-
-      case 's3':
-        return $path ? self::$baseUrl . implode('/', $path) : $this->d4Url();
-        break;
-    }
+    return ($path = $this->path($key)) ? self::$baseUrl . implode('/', $path) : $this->d4Url();
   }
 
   public function path($fileName = '') {
-    
-    switch (Uploader::$driver) {
-      case 'local':
-        return $fileName ? array_merge(self::$baseDirs, $this->getSavePath(), [$fileName]) : [];
-        break;
-
-      case 's3':
-        return $fileName ? array_merge ($this->getBaseDirectory (), $this->getSavePath (), array ($fileName)) : array ();
-        break;
-    }
+    return $fileName ? array_merge(self::$baseDirs, $this->getSavePath(), [$fileName]) : [];
   }
 
   public function getSavePath() {
@@ -88,25 +77,21 @@ abstract class Uploader {
   protected function d4Url() {
     return '';
   }
-  
-  protected function getRandomName () {
-    return md5 (uniqid (mt_rand (), true));
+
+
+  protected static function log($log) {
+    \_M\Config::log($log);
+    return false;
   }
 
   public function put($fileInfo) {
-    if (!($fileInfo && (is_array($fileInfo) || (is_string($fileInfo) && file_exists($fileInfo))))) {
-      \_M\Config::log('[Uploader] put 格式有誤(1)。');
-      return false;
-    }
+    if (!($fileInfo && (is_array($fileInfo) || (is_string($fileInfo) && file_exists($fileInfo)))))
+      return self::log('[Uploader] put 格式有誤(1)。');
 
-    $isUseMoveUploadedFile = is_array($fileInfo);
-
-    if ($isUseMoveUploadedFile) {
-      foreach (array ('name', 'tmp_name', 'type', 'error', 'size') as $key)
-        if (!array_key_exists($key, $fileInfo)) {
-          \_M\Config::log('[Uploader] put 格式有誤(2)。');
-          return false;
-        }
+    if ($isUseMoveUploadedFile = is_array($fileInfo)) {
+      foreach (['name', 'tmp_name', 'type', 'error', 'size'] as $key)
+        if (!array_key_exists($key, $fileInfo))
+          return self::log('[Uploader] put 格式有誤(2)。');
 
       $name = $fileInfo['name'];
     } else {
@@ -116,28 +101,22 @@ abstract class Uploader {
 
     $name = preg_replace("/[^a-zA-Z0-9\\._-]/", "", $name);
     $format = ($format = pathinfo($name, PATHINFO_EXTENSION)) ? '.' . $format : '';
-    $name = ($name = pathinfo($name, PATHINFO_FILENAME)) ? $name . $format : $this->getRandomName() . $format;
+    $name = ($name = pathinfo($name, PATHINFO_FILENAME)) ? $name . $format : getRandomName() . $format;
 
-    if (!$temp = $this->moveOriFile($fileInfo, $isUseMoveUploadedFile)) {
-      \_M\Config::log('[Uploader] 搬移至暫存資料夾時發生錯誤。');
-      return false;
-    }
+    if (!$temp = $this->moveOriFile($fileInfo, $isUseMoveUploadedFile))
+      return self::log('[Uploader] put 搬移至暫存資料夾時發生錯誤。');
 
-    if (!$savePath = $this->verifySavePath()) {
-      \_M\Config::log('[Uploader] 確認儲存路徑發生錯誤。');
-      return false;
-    }
+    if (!$saveDirs = $this->verifySaveDirs())
+      return self::log('[Uploader] put 確認儲存路徑發生錯誤。');
 
-    if (!$result = $this->moveFileAndUploadColumn($temp, $savePath, $name)) {
-      \_M\Config::log('[Uploader] 搬移預設位置時發生錯誤。');
-      return false;
-    }
+    if (!$result = $this->moveFileAndUploadColumn($temp, $saveDirs, $name))
+      return self::log('[Uploader] put 搬移預設位置時發生錯誤。');
 
     return true;
   }
 
   private function moveOriFile($fileInfo, $isUseMoveUploadedFile) {
-    $temp = self::$tmpDir . 'uploader_' . $this->getRandomName();
+    $temp = self::$tmpDir . 'uploader_' . getRandomName();
 
     if ($isUseMoveUploadedFile)
       @move_uploaded_file($fileInfo['tmp_name'], $temp);
@@ -146,106 +125,90 @@ abstract class Uploader {
 
     umaskChmod($temp, 0777);
 
-    if (!file_exists ($temp)) {
-      \_M\Config::log('[Uploader] moveOriFile 移動檔案失敗。Path：' . $temp);
-      return false;
-    }
+    if (!file_exists ($temp))
+      return self::log('[Uploader] moveOriFile 移動檔案失敗。Path：' . $temp);
 
     return $temp;
   }
 
-  private function verifySavePath() {
-    switch (Uploader::$driver) {
+  private function verifySaveDirs() {
+    switch (self::$driver) {
       case 'local':
 
-        if (!is_writable($path = implode (DIRECTORY_SEPARATOR, Uploader::$baseDirs))) {
-          \_M\Config::log('[Uploader] verifySavePath 資料夾不能儲存。Path：' . $path);
-          return false;
-        }
+        if (!is_writable($path = implode(DIRECTORY_SEPARATOR, self::$baseDirs)))
+          return self::log('[Uploader] verifySaveDirs 資料夾不能儲存。Path：' . $path);
 
-        if (!file_exists ($tmp = implode (DIRECTORY_SEPARATOR, $path = array_merge (Uploader::$baseDirs, $this->getSavePath()))))
-          umaskMkdir($tmp, 0777, true);
+        file_exists($tmp = implode(DIRECTORY_SEPARATOR, $path = array_merge(self::$baseDirs, $this->getSavePath()))) || umaskMkdir($tmp, 0777, true);
 
-        if (!is_writable($tmp)) {
-          \_M\Config::log('[Uploader] verifySavePath 資料夾不能儲存。Path：' . $tmp);
-          return false;
-        }
+        if (!is_writable($tmp))
+          return self::log('[Uploader] verifySaveDirs 資料夾不能儲存。Path：' . $tmp);
 
         return $path;
         break;
 
       case 's3':
-        // return array_merge ($this->getBaseDirectory (), $this->getSavePath ());
+        return array_merge(self::$baseDirs, $this->getSavePath ());
         break;
     }
     return false;
   }
   
-  protected function moveFileAndUploadColumn($temp, $savePath, $oriName) {
-    switch (Uploader::$driver) {
+  protected function moveFileAndUploadColumn($temp, $saveDirs, $oriName) {
+    switch (self::$driver) {
       case 'local':
-        if (!@rename($temp, $path = implode(DIRECTORY_SEPARATOR, $savePath) . DIRECTORY_SEPARATOR . $oriName)) {
-          \_M\Config::log('[Uploader] moveFileAndUploadColumn rename 搬移預設位置時發生錯誤。Path：' . $path);
-          return false;
-        }
-
-        if (!$this->uploadColumnAndUpload('')) {
-          \_M\Config::log('[Uploader] moveFileAndUploadColumn uploadColumnAndUpload = 0 錯誤。');
-          return false;
-        }
-
-        if (!$this->uploadColumnAndUpload($oriName)) {
-          \_M\Config::log('[Uploader] moveFileAndUploadColumn uploadColumnAndUpload = ' . $oriName . ' 錯誤。');
-          return false;
-        }
-
-        return true;
+        if (!@rename($temp, $path = implode(DIRECTORY_SEPARATOR, $saveDirs) . DIRECTORY_SEPARATOR . $oriName))
+          return self::log('[Uploader] moveFileAndUploadColumn local rename 搬移預設位置時發生錯誤。Path：' . $path);
         break;
 
       case 's3':
-        // return Uploader::s3ExceptionRetuen ('putObject', $temp, $this->getS3Bucket (), implode ('/', $savePath) . '/' . $oriName) && $this->uploadColumnAndUpload ('') ? $this->uploadColumnAndUpload ($oriName) && @unlink ($temp) : Uploader::error ('[Uploader] moveFileAndUploadColumn 搬移預設位置時發生錯誤。');
+        if (!\S3::putObject($temp, self::$s3Bucket, $uri = implode ('/', $saveDirs) . '/' . $oriName))
+          return self::log('[Uploader] moveFileAndUploadColumn s3 putObject 丟至 S3 發生錯誤。Bucket：' . self::$s3Bucket . '，uri：' . $uri);
+
+        @unlink($temp) || self::log('[Uploader] moveFileAndUploadColumn s3 移除舊資料錯誤。');
         break;
-    }
-    return false;
-  }
-  protected function uploadColumnAndUpload($value, $isSave = true) {
-    if (!$this->cleanOldFile ()) {
-      \_M\Config::log('[Uploader] uploadColumnAndUpload 清除值發生錯誤。');
-      return false;
+
     }
 
+    if (!$this->uploadColumnAndUpload(''))
+      return self::log('[Uploader] moveFileAndUploadColumn uploadColumnAndUpload = "" 錯誤。');
+
+    if (!$this->uploadColumnAndUpload($oriName))
+      return self::log('[Uploader] moveFileAndUploadColumn uploadColumnAndUpload = ' . $oriName . ' 錯誤。');
+
+    return true;
+  }
+
+  protected function uploadColumnAndUpload($value, $isSave = true) {
+    $this->cleanOldFile ();
     return $isSave ? $this->uploadColumn($value) : true;
   }
 
   protected function cleanOldFile() {
-    switch (Uploader::$driver) {
+    switch (self::$driver) {
       case 'local':
         if ($paths = $this->getAllPaths())
           foreach ($paths as $path)
-            if (is_writable($path = implode (DIRECTORY_SEPARATOR, $path)))
-              if (!@unlink($path)) {
-                \_M\Config::log('[Uploader] cleanOldFile 清除檔案發生錯誤。Path：' . $path);
-                return false;
-              }
-        return true;
+            if (is_writable($path = implode(DIRECTORY_SEPARATOR, $path)))
+              @unlink($path) || self::log('[Uploader] cleanOldFile 清除檔案發生錯誤。Path：' . $path);
         break;
 
       case 's3':
-        // if ($paths = $this->getAllPaths ())
-        //   foreach ($paths as $path)
-        //     if (!Uploader::s3ExceptionRetuen ('deleteObject', $this->getS3Bucket (), implode ('/', $path)))
-        //       return Uploader::error ('[Uploader] cleanOldFile 清除檔案發生錯誤。Path：' . $path);
-        // return true;
+        if ($paths = $this->getAllPaths())
+          foreach ($paths as $path)
+            \S3::deleteObject(self::$s3Bucket, implode('/', $path)) || self::log('[Uploader] cleanOldFile 清除檔案發生錯誤。Path：' . $path);
         break;
     }
-    return false;
+
+    return true;
   }
-  public function getAllPaths () {
+
+  public function getAllPaths() {
     if (!(string)$this->value)
       return array ();
 
-    return [array_merge (self::$baseDirs, $this->getSavePath(), [(string)$this->value])];
+    return [array_merge(self::$baseDirs, $this->getSavePath(), [(string)$this->value])];
   }
+
   protected function uploadColumn($value) {
     $column = $this->column;
     $this->orm->$column = $value;
@@ -259,58 +222,6 @@ abstract class Uploader {
   }
 
 
-
-
-
-
-
-
-
-
-
-//   public function __construct ($val) {
-//     $this->val = $val;
-
-// // echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
-// // var_dump (__DIR__);
-// // exit ();
-
-//     // Uploader::$driver = \_M\Config::getUploaderDriver();
-//   }
-
-//   pu
-
-  // private static $debug = false;
-
-  // private $driverConfigs = array ();
-  // protected $tmpDir = null;
-
-
-
-
-  // protected function getS3Bucket () {
-  //   return $this->driverConfigs['bucket'];
-  // }
-
-  // protected function getDriver () {
-  //   return config ('uploader', 'driver');
-  // }
-
-
-  // public static function mustError () {
-  //   throw new UploaderException (call_user_func_array ('sprintf', func_get_args ()));
-  // }
-
-  // public static function s3ExceptionRetuen () {
-  //   if (!(class_exists ('S3') && ($args = func_get_args ()) && ($method = array_shift ($args)) && is_callable (array ('S3', $method))))
-  //     return Uploader::error ('S3 物件未初始，或錯誤的 Method。');
-
-  //   try {
-  //     return call_user_func_array (array ('S3', $method), $args);
-  //   } catch (S3Exception $e) {
-  //     return Uploader::error ($e->getMessage ());
-  //   }
-  // }
 
   // public static function error () {
   //   if (self::$debug)
@@ -346,8 +257,8 @@ abstract class Uploader {
 
   public function putUrl($url) {
     $format = strtolower(pathinfo($url, PATHINFO_EXTENSION));
-    $temp = downloadWebFile($url, self::$tmpDir . $this->getRandomName () . ($format ? '.' . $format : ''));
-    return $temp && $this->put($temp, false) ? file_exists($temp) ? @unlink ($temp) : true : false;
+    $temp = downloadWebFile($url, self::$tmpDir . getRandomName() . ($format ? '.' . $format : ''));
+    return $temp && $this->put($temp, false) ? file_exists($temp) ? @unlink($temp) : true : false;
   }
 }
 
@@ -388,12 +299,12 @@ class ImageUploader extends Uploader {
 
 //     $paths = array ();
 //     foreach ($versions as $key => $version)
-//       array_push ($paths, array_merge ($this->getBaseDirectory (), $this->getSavePath (), array ($key . $this->config['separate_symbol'] . $this->getValue ())));
+//       array_push ($paths, array_merge($this->getBaseDirectory (), $this->getSavePath (), array ($key . $this->config['separate_symbol'] . $this->getValue ())));
 
 //     return $paths;
 //   }
 
-//   protected function moveFileAndUploadColumn ($temp, $savePath, $ori_name) {
+//   protected function moveFileAndUploadColumn ($temp, $saveDirs, $ori_name) {
 //     if (!($versions = $this->versions ()) && !Uploader::error ('[ImageUploader] moveFileAndUploadColumn Versions 格式錯誤。'))
 //       return false;
 
@@ -413,7 +324,7 @@ class ImageUploader extends Uploader {
 //         $image = Thumbnail::$method ($temp);
 //         $image->rotate ($orientation == 6 ? 90 : ($orientation == 8 ? -90 : ($orientation == 3 ? 180 : 0)));
 
-//         $name = !isset ($name) ? $this->getRandomName () . ($this->config['auto_add_format'] ? '.' . $image->getFormat () : '') : $name;
+//         $name = !isset ($name) ? getRandomName () . ($this->config['auto_add_format'] ? '.' . $image->getFormat () : '') : $name;
 //         $new_name = $key . $this->config['separate_symbol'] . $name;
 
 //         $new_path = $this->tmpDir . $new_name;
@@ -429,14 +340,14 @@ class ImageUploader extends Uploader {
 //     switch ($this->getDriver ()) {
 //       case 'local':
 //         foreach ($news as $new)
-//           if (!@rename ($new['path'], FCPATH . implode (DIRECTORY_SEPARATOR, $savePath) . DIRECTORY_SEPARATOR . $new['name']))
+//           if (!@rename ($new['path'], FCPATH . implode (DIRECTORY_SEPARATOR, $saveDirs) . DIRECTORY_SEPARATOR . $new['name']))
 //             return Uploader::error ('[ImageUploader] moveFileAndUploadColumn 不明原因錯誤。');
 //         return self::uploadColumnAndUpload ('') && self::uploadColumnAndUpload ($name) && @unlink ($temp);
 //         break;
 
 //       case 's3':
 //         foreach ($news as $new)
-//           if (!(Uploader::s3ExceptionRetuen ('putObject', $new['path'], $this->getS3Bucket (), implode (DIRECTORY_SEPARATOR, $savePath) . DIRECTORY_SEPARATOR . $new['name']) && @unlink ($new['path'])))
+//           if (!(Uploader::s3Instance ('putObject', $new['path'], $this->getS3Bucket (), implode (DIRECTORY_SEPARATOR, $saveDirs) . DIRECTORY_SEPARATOR . $new['name']) && @unlink ($new['path'])))
 //             return Uploader::error ('[ImageUploader] moveFileAndUploadColumn 不明原因錯誤。');
 //         return self::uploadColumnAndUpload ('') && self::uploadColumnAndUpload ($name) && @unlink ($temp);
 //         break;
@@ -474,10 +385,10 @@ class ImageUploader extends Uploader {
 //     switch ($this->getDriver ()) {
 //       case 'local':
 //         foreach (array_keys ($versions) as $oriKey)
-//           if (is_readable ($oriPath = FCPATH . implode (DIRECTORY_SEPARATOR, array_merge ($this->getBaseDirectory (), $this->getSavePath (), array ($oriKey . $this->config['separate_symbol'] . ($name = $this->getValue ()))))))
+//           if (is_readable ($oriPath = FCPATH . implode (DIRECTORY_SEPARATOR, array_merge($this->getBaseDirectory (), $this->getSavePath (), array ($oriKey . $this->config['separate_symbol'] . ($name = $this->getValue ()))))))
 //             break;
 
-//         if (!file_exists ($t = FCPATH . implode (DIRECTORY_SEPARATOR, ($path = array_merge ($this->getBaseDirectory (), $this->getSavePath ())))))
+//         if (!file_exists ($t = FCPATH . implode (DIRECTORY_SEPARATOR, ($path = array_merge($this->getBaseDirectory (), $this->getSavePath ())))))
 //           Uploader::mkdir ($t, 0777, true);
 
 //         if (!is_writable ($t) && !Uploader::error ('[ImageUploader] saveAs 資料夾不能儲存。Path：' . $path))
@@ -497,15 +408,15 @@ class ImageUploader extends Uploader {
 //         break;
 
 //       case 's3':
-//         if (!Uploader::s3ExceptionRetuen ('getObject', implode (DIRECTORY_SEPARATOR, array_merge ($path = array_merge ($this->getBaseDirectory (), $this->getSavePath ()), array ($fileName = array_shift (array_keys ($versions)) . $this->config['separate_symbol'] . ($name = $this->getValue ())))), FCPATH . implode (DIRECTORY_SEPARATOR, $fileName = array_merge ($this->getTempDirectory (), array ($fileName)))))
+//         if (!Uploader::s3Instance ('getObject', implode (DIRECTORY_SEPARATOR, array_merge($path = array_merge($this->getBaseDirectory (), $this->getSavePath ()), array ($fileName = array_shift (array_keys ($versions)) . $this->config['separate_symbol'] . ($name = $this->getValue ())))), FCPATH . implode (DIRECTORY_SEPARATOR, $fileName = array_merge($this->getTempDirectory (), array ($fileName)))))
 //           return $this->getDebug () ? error ('ImageUploader 錯誤。', '沒有任何的檔案可以被使用。', '請確認 getVersions () 函式內有存在的檔案可被另存。', '請程式設計者確認狀況。') : array ();
 
 //         try {
 //           $image = ImageUtility::create ($fileName = FCPATH . implode (DIRECTORY_SEPARATOR, $fileName), null);
-//           $newPath = array_merge ($path, array ($newName = $key . $this->config['separate_symbol'] . $name));
+//           $newPath = array_merge($path, array ($newName = $key . $this->config['separate_symbol'] . $name));
 
 
-//           if ($this->_utility ($image, FCPATH . implode (DIRECTORY_SEPARATOR, $newFileName = array_merge ($this->getTempDirectory (), array ($newName))), $key, $version) && Uploader::s3ExceptionRetuen ('putFile', $newFileName = FCPATH . implode (DIRECTORY_SEPARATOR, $newFileName), $this->getS3Bucket (), implode (DIRECTORY_SEPARATOR, $newPath)) && @unlink ($newFileName) && @unlink ($fileName))
+//           if ($this->_utility ($image, FCPATH . implode (DIRECTORY_SEPARATOR, $newFileName = array_merge($this->getTempDirectory (), array ($newName))), $key, $version) && Uploader::s3Instance ('putFile', $newFileName = FCPATH . implode (DIRECTORY_SEPARATOR, $newFileName), $this->getS3Bucket (), implode (DIRECTORY_SEPARATOR, $newPath)) && @unlink ($newFileName) && @unlink ($fileName))
 //             return $newPath;
 //           else
 //             return array ();
