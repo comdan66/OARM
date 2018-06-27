@@ -142,9 +142,13 @@ require_once 'Thumbnail.php';
 Thumbnail::setLogerFunc('Log::error');
 
 try {
-  $img = Thumbnail::createGd('tmp/aa.png');
-  $img->resizePercent(50);
-  $img->save('tmp/x.png');
+  $img = Thumbnail::createImagick('tmp/b.jpg');
+  echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
+  var_dump ($img->saveAnalysisChart('', ''));
+  exit ();
+  $img->save('tmp/x.jpg');
+
+  // Thumbnail::createImagickPhotos(['tmp/b.jpg', ], 'tmp/x.jpg');
 } catch(Exception $e) {
   echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
   var_dump ('xxxxxxxx'.$e->getMessage());
