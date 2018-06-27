@@ -26,7 +26,7 @@ final class S3Request {
     $this->headers['Host'] = ($this->bucket ? $this->bucket . '.' : '') . $defaultHost;
     $this->headers['Date'] = gmdate('D, d M Y H:i:s T');
 
-    $this->response = new \STDClass;
+    $this->response = new STDClass;
     $this->response->error = null;
     $this->response->body = '';
     $this->response->code = null;
@@ -41,8 +41,8 @@ final class S3Request {
   public function setFile($file, $mode = 'rb', $autoSetSize = true) { $this->fp = @fopen($file, $mode); $autoSetSize && $this->setSize(filesize($file)); return $this; }
   public function setSize($size) { $this->size = $size; return $this; }
 
-  public function getSize() { return $this->fp; }
-  public function getFile() { return $this->size; }
+  public function getSize() { return $this->size; }
+  public function getFile() { return $this->fp; }
 
   private function makeAmz() {
     $amz = [];
@@ -204,10 +204,22 @@ class S3 {
   public static $isUseSsl      = false;
   public static $isVerifyPeer  = true;
 
+  private static $logerFunc = null;
+
   public static function init($accessKey, $secretKey) {
     self::setAccessKey($accessKey);
     self::setSecretKey($secretKey);
   }
+
+  public static function setLogerFunc($logerFunc) {
+    is_callable($logerFunc) && self::$logerFunc = $logerFunc;
+  }
+
+  private static function log() {
+    ($func = self::$logerFunc) && call_user_func_array($func, [implode('，', array_merge(['[S3]'], func_get_args()))]);
+    return false;
+  }
+
   public static function setAccessKey($accessKey) {
     is_string($accessKey) && self::$accessKey = trim($accessKey);
   }
@@ -233,7 +245,8 @@ class S3 {
   }
 
   public static function buckets() {
-    self::isSuccess($rest = S3Request::create('GET')->getResponse()) || \_M\Config::error(sprintf("S3::listBuckets(): [%s] %s", $rest->code, 'Unexpected HTTP status'));
+    if (!self::isSuccess($rest = S3Request::create('GET')->getResponse()))
+      return self::log('buckets 異常的 HTTP 狀態', 'Code：' . $rest->code);
 
     $buckets = [];
 
@@ -247,7 +260,8 @@ class S3 {
   }
 
   public static function bucketsWithDetail() {
-    self::isSuccess($rest = S3Request::create('GET')->getResponse()) || \_M\Config::error(sprintf("S3::listBuckets(): [%s] %s", $rest->code, 'Unexpected HTTP status'));
+    if (!self::isSuccess($rest = S3Request::create('GET')->getResponse()))
+      return self::log('bucketsWithDetail 異常的 HTTP 狀態', 'Code：' . $rest->code);
 
     $results = [];
 
@@ -265,7 +279,8 @@ class S3 {
   }
 
   public static function bucket($bucket, $prefix = null, $marker = null, $maxKeys = null, $delimiter = null, $returnCommonPrefixes = false) {
-    self::isSuccess($rest = S3Request::create('GET', $bucket)->setParameter('prefix', $prefix)->setParameter('marker', $marker)->setParameter('max-keys', $maxKeys)->setParameter('delimiter', $delimiter)->getResponse()) || \_M\Config::error(sprintf("S3::getBucket(): [%s] %s", $rest->code, 'Unexpected HTTP status'));
+    if (!self::isSuccess($rest = S3Request::create('GET', $bucket)->setParameter('prefix', $prefix)->setParameter('marker', $marker)->setParameter('max-keys', $maxKeys)->setParameter('delimiter', $delimiter)->getResponse()))
+      return self::log('bucket 異常的 HTTP 狀態', 'Code：' . $rest->code, '參數：' . json_encode(['bucket' => $bucket, 'prefix' => $prefix, 'marker' => $marker, 'maxKeys' => $maxKeys, 'delimiter' => $delimiter, 'returnCommonPrefixes' => $returnCommonPrefixes]));
 
     $nextMarker = null;
     $results = [];
@@ -320,14 +335,11 @@ class S3 {
            ->setData($dom->saveXML());
     }
 
-    self::isSuccess($rest = $rest->getResponse()) || \_M\Config::error(sprintf("S3::putBucket(%s, %s, %s): [%s] %s", $bucket, $acl, $location, $rest->code, 'Unexpected HTTP status'));
-
-    return true;
+    return self::isSuccess($rest = $rest->getResponse()) ? true : self::log('createBucket 異常的 HTTP 狀態', 'Code：' . $rest->code, '參數：' . json_encode(['bucket' => $bucket, 'acl' => $acl, 'location' => $location]));
   }
 
   public static function deleteBucket($bucket) {
-    self::isSuccess($rest = S3Request::create('DELETE', $bucket)->getResponse(), [200, 204]) || \_M\Config::error(sprintf("S3::deleteBucket(%s): [%s] %s", $bucket, $rest->code, 'Unexpected HTTP status'));
-    return true;
+    return self::isSuccess($rest = S3Request::create('DELETE', $bucket)->getResponse(), [200, 204]) ? true : self::log('deleteBucket 異常的 HTTP 狀態', 'Code：' . $rest->code, '參數：' . json_encode(['bucket' => $bucket]));
   }
 
   private static function getMimeType(&$file) {
@@ -345,36 +357,35 @@ class S3 {
 
   // $headers => "Cache-Control" => "max-age=5", setcache 5 sec
   public static function putObject($filePath, $bucket, $s3Path, $acl = self::ACL_PUBLIC_READ, $amzHeaders = [], $headers = []) {
-    is_file($filePath) && is_readable($filePath) || \_M\Config::error(sprintf("S3::putObject (): Unable to open input file: %s", $filePath));
+    if (!(is_file($filePath) && is_readable($filePath)))
+      return self::log('putObject 無法開啟檔案', '路徑：' . $filePath, '參數：' . json_encode(['filePath' => $filePath, 'bucket' => $bucket, 's3Path' => $s3Path, 'acl' => $acl, 'amzHeaders' => $amzHeaders, 'headers' => $headers]));
 
     $rest = S3Request::create('PUT', $bucket, $s3Path)
                      ->setHeaders(array_merge(['Content-Type' => self::getMimeType($filePath), 'Content-MD5' => self::fileMD5($filePath)], $headers))->setAmzHeaders(array_merge(['x-amz-acl' => $acl], $amzHeaders))->setFile($filePath);
 
-    $rest->getSize() >= 0 && $rest->getFile() !== null || \_M\Config::error(sprintf("S3::putObject(): [%s] %s", 0, 'Missing input parameters'));
-    self::isSuccess($rest = $rest->getResponse()) || \_M\Config::error(sprintf("S3::putObject(): [%s] %s", $rest->code, 'Unexpected HTTP status'));
+    if ($rest->getSize() < 0 || $rest->getFile() === null)
+      return self::log('putObject 參數錯誤', 'Code：' . $rest->code, '參數：' . json_encode(['filePath' => $filePath, 'bucket' => $bucket, 's3Path' => $s3Path, 'acl' => $acl, 'amzHeaders' => $amzHeaders, 'headers' => $headers]));
 
-    return true;
+    return self::isSuccess($rest = $rest->getResponse()) ? true : self::log('putObject 異常的 HTTP 狀態', 'Code：' . $rest->code, '參數：' . json_encode(['filePath' => $filePath, 'bucket' => $bucket, 's3Path' => $s3Path, 'acl' => $acl, 'amzHeaders' => $amzHeaders, 'headers' => $headers]));
   }
 
   public static function getObject($bucket, $uri, $saveTo = null) {
     $rest = S3Request::create('GET', $bucket, $uri);
-    $saveTo && ($rest->setFile($saveTo, 'wb', false)->getFile() !== null && $rest->file = realpath($saveTo) || \_M\Config::error(sprintf("S3::getObject(%s, %s): [%s] %s", $bucket, $uri, 0, 'Unable to open save file for writing: ' . $saveTo)));
-    self::isSuccess($rest = $rest->getResponse()) || \_M\Config::error(sprintf("S3::getObject(%s, %s): [%s] %s", $bucket, $uri, $rest->code, 'Unexpected HTTP status'));
-    return $rest;
+    if ($saveTo && ($rest->setFile($saveTo, 'wb', false)->getFile() === null || !($rest->file = realpath($saveTo))))
+      return self::log('getObject 無法寫入', '位置：' . $saveTo, '參數：' . json_encode(['bucket' => $bucket, 'uri' => $uri, 'saveTo' => $saveTo]));
+
+    return self::isSuccess($rest = $rest->getResponse()) ? true : self::log('getObject 異常的 HTTP 狀態', 'Code：' . $rest->code, '參數：' . json_encode(['bucket' => $bucket, 'uri' => $uri, 'saveTo' => $saveTo]));
   }
 
   public static function getObjectInfo($bucket, $uri) {
-    self::isSuccess($rest = S3Request::create('HEAD', $bucket, $uri)->getResponse(), [200, 404]) || \_M\Config::error(sprintf("S3::getObjectInfo(%s, %s): [%s] %s", $bucket, $uri, $rest->code, 'Unexpected HTTP status'));
-    return $rest->code == 200 ? $rest->headers : false;
+    return self::isSuccess($rest = S3Request::create('HEAD', $bucket, $uri)->getResponse(), [200, 404]) ? $rest->code == 200 ? $rest->headers : false : self::log('getObjectInfo 異常的 HTTP 狀態', 'Code：' . $rest->code, '參數：' . json_encode(['bucket' => $bucket, 'uri' => $uri]));
   }
 
   public static function copyObject($srcBucket, $srcUri, $bucket, $uri, $acl = self::ACL_PUBLIC_READ, $amzHeaders = [], $headers = []) {
-    self::isSuccess($rest = S3Request::create('PUT', $bucket, $uri)->setHeaders($headers = array_merge(['Content-Length' => 0], $headers))->setAmzHeaders($amzHeaders = array_merge(['x-amz-acl' => $acl, 'x-amz-copy-source' => sprintf('/%s/%s', $srcBucket, $srcUri)], $amzHeaders))->setAmzHeader('x-amz-metadata-directive', $headers || $amzHeaders ? 'REPLACE' : null)->getResponse()) || \_M\Config::error(sprintf("S3::copyObject(%s, %s, %s, %s): [%s] %s", $srcBucket, $srcUri, $bucket, $uri, $rest->code, 'Unexpected HTTP status'));
-    return isset($rest->body->LastModified, $rest->body->ETag) ? ['time' => date('Y-m-d H:i:s', strtotime((string)$rest->body->LastModified)), 'hash' => substr((string)$rest->body->ETag, 1, -1)] : false;
+    return self::isSuccess($rest = S3Request::create('PUT', $bucket, $uri)->setHeaders($headers = array_merge(['Content-Length' => 0], $headers))->setAmzHeaders($amzHeaders = array_merge(['x-amz-acl' => $acl, 'x-amz-copy-source' => sprintf('/%s/%s', $srcBucket, $srcUri)], $amzHeaders))->setAmzHeader('x-amz-metadata-directive', $headers || $amzHeaders ? 'REPLACE' : null)->getResponse()) && isset($rest->body->LastModified, $rest->body->ETag) ? ['time' => date('Y-m-d H:i:s', strtotime((string)$rest->body->LastModified)), 'hash' => substr((string)$rest->body->ETag, 1, -1)] : self::log('copyObject 異常的 HTTP 狀態', 'Code：' . $rest->code, '參數：' . json_encode(['srcBucket' => $srcBucket, 'srcUri' => $srcUri, 'bucket' => $bucket, 'uri' => $uri, 'acl' => $acl, 'amzHeaders' => $amzHeaders, 'headers' => $headers]));
   }
 
   public static function deleteObject($bucket, $uri) {
-    self::isSuccess($rest = S3Request::create('DELETE', $bucket, $uri)->getResponse(), [200, 204]) || \_M\Config::error(sprintf("S3::deleteObject(): [%s] %s", $rest->code, 'Unexpected HTTP status'));
-    return true;
+    return self::isSuccess($rest = S3Request::create('DELETE', $bucket, $uri)->getResponse(), [200, 204]) ? true : self::log('deleteObject 異常的 HTTP 狀態', 'Code：' . $rest->code, '參數：' . json_encode(['bucket' => $bucket, 'uri' => $uri]));
   }
 }

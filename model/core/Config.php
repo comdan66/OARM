@@ -45,16 +45,8 @@ class Config {
     return self::$modelsDir;
   }
 
-  public static function getLogerFunc() {
-    return self::$logerFunc;
-  }
-
-  public static function getQueryLogerFunc() {
-    return self::$queryLogerFunc;
-  }
-
-  public static function getErrorFunc() {
-    return self::$errorFunc;
+  public static function noQueryLogerFunc() {
+    return self::$queryLogerFunc === null;
   }
 
   public static function getConnection() {

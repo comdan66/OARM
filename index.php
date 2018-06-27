@@ -111,11 +111,11 @@ class Log {
 
 Benchmark::markStar('整體');
 
-\_M\Config::setModelsDir (__DIR__ . '/models/');
-\_M\Config::setQueryLogerFunc ('Log::query');
-\_M\Config::setLogerFunc ('Log::error');
-\_M\Config::setErrorFunc ('gg');
-\_M\Config::setConnection ([
+\_M\Config::setModelsDir(__DIR__ . '/models/');
+\_M\Config::setQueryLogerFunc('Log::query');
+\_M\Config::setLogerFunc('Log::error');
+\_M\Config::setErrorFunc('gg');
+\_M\Config::setConnection([
   'hostName' => '127.0.0.1',
   'database' => 'gps.kerker',
   'userName' => 'root',
@@ -132,6 +132,26 @@ Benchmark::markStar('整體');
 
 require_once 'S3.php';
 S3::init('', '');
+S3::setLogerFunc('Log::error');
+
+// echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
+// var_dump (S3::getObject('tests.ioaw.tw', 'a.php'));
+// exit ();
+
+require_once 'Thumbnail.php';
+Thumbnail::setLogerFunc('Log::error');
+
+try {
+  $img = Thumbnail::createGd('tmp/aa.png');
+  $img->resizePercent(50);
+  $img->save('tmp/x.png');
+} catch(Exception $e) {
+  echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
+  var_dump ('xxxxxxxx'.$e->getMessage());
+  exit ();
+}
+  exit ();
+
 
 
 // new \M\Article();
@@ -175,7 +195,11 @@ echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>
 
 $article = \M\Article::one(['select' => 'id, cover']);
 $article->cover->putUrl('http://flowers.taipei/imagespace/plant_tree/original/thumb_image_6710831.JPG');
-var_dump ($article->cover->url());
+
+echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
+var_dump ($article->cover->getPathsDirs());
+exit ();
+// var_dump ($article->cover->url());
 
 
 // $article->cover = 'sss';
