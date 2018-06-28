@@ -3,34 +3,6 @@
 namespace _M;
 
 class Column {
-  // const STRING    = 1;
-  // const INTEGER   = 2;
-  // const DECIMAL   = 3;
-  // const DATETIME  = 4;
-  // const DATE      = 5;
-  // const TIME      = 6;
-  // const UPLOADER  = 7;
-
-  // static $types = [
-  //   'datetime'  => self::DATETIME,
-  //   'timestamp' => self::DATETIME,
-  //   'date'      => self::DATE,
-  //   'time'      => self::TIME,
-
-  //   'tinyint'   => self::INTEGER,
-  //   'smallint'  => self::INTEGER,
-  //   'mediumint' => self::INTEGER,
-  //   'int'       => self::INTEGER,
-  //   'bigint'    => self::INTEGER,
-
-  //   'float'     => self::DECIMAL,
-  //   'double'    => self::DECIMAL,
-  //   'numeric'   => self::DECIMAL,
-  //   'decimal'   => self::DECIMAL,
-  //   'dec'       => self::DECIMAL,
-
-  //   'uploader'  => self::UPLOADER];
-
   public $name;
   public $isNullable;
   public $isPrimaryKey;
@@ -106,3 +78,32 @@ class Column {
       return (int)$val;
   }
 }
+
+
+  // const STRING    = 1;
+  // const INTEGER   = 2;
+  // const DECIMAL   = 3;
+  // const DATETIME  = 4;
+  // const DATE      = 5;
+  // const TIME      = 6;
+  // const UPLOADER  = 7;
+
+  // static $types = [
+  //   'datetime'  => self::DATETIME,
+  //   'timestamp' => self::DATETIME,
+  //   'date'      => self::DATE,
+  //   'time'      => self::TIME,
+
+  //   'tinyint'   => self::INTEGER,
+  //   'smallint'  => self::INTEGER,
+  //   'mediumint' => self::INTEGER,
+  //   'int'       => self::INTEGER,
+  //   'bigint'    => self::INTEGER,
+
+  //   'float'     => self::DECIMAL,
+  //   'double'    => self::DECIMAL,
+  //   'numeric'   => self::DECIMAL,
+  //   'decimal'   => self::DECIMAL,
+  //   'dec'       => self::DECIMAL,
+
+  //   'uploader'  => self::UPLOADER];

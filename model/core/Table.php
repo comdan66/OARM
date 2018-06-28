@@ -5,17 +5,18 @@ namespace _M;
 
 class Table {
   private static $caches = [];
+
   private $className;
-  
-  public $tableName;
-  public $columns;
-  public $primaryKeys;
+  public  $tableName;
+  public  $columns;
+  public  $primaryKeys;
 
   protected function __construct($className) {
     $this->setTableName($className)
          ->getMetaData()
          ->setPrimaryKeys();
   }
+
   private function setTableName($className){
     $this->className = $className;
     $this->tableName = isset($className::$tableName) ? $className::$tableName : \M\deNamespace($className);
@@ -25,12 +26,10 @@ class Table {
   private function getMetaData () {
     $this->columns = [];
     $sth = Connection::instance()->query("SHOW COLUMNS FROM " . Config::quoteName($this->tableName));
-    // echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
-    // var_dump ();
-    // exit ();
-    while ($row = $sth->fetch())
-      if ($c = Column::create($row, $this->className))
-        $this->columns[$c->name] = $c;
+
+    foreach ($sth->fetchAll() as $row)
+      if ($column = Column::create($row, $this->className))
+        $this->columns[$column->name] = $column;
 
     return $this;
   }
@@ -139,5 +138,4 @@ class Table {
 
     return $objs;
   }
-
 }
