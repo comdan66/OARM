@@ -23,20 +23,45 @@ class Table {
     return $this;
   }
 
-  private function getMetaData () {
+  private function getMetaData() {
     $this->columns = [];
     $sth = Connection::instance()->query("SHOW COLUMNS FROM " . Config::quoteName($this->tableName));
 
     foreach ($sth->fetchAll() as $row)
-      if ($column = Column::create($row, $this->className))
-        $this->columns[$column->name] = $column;
+      if ($column = Table::column($row, $this->className))
+        $this->columns[$column['name']] = $column;
 
     return $this;
   }
 
+  public static function column($row, $className) {
+    $row = array_change_key_case($row, CASE_LOWER);
+
+    if ($row['type'] == 'timestamp' || $row['type'] == 'datetime') {
+      $type = 'datetime';
+    } elseif ($row['type'] == 'date') {
+      $type = 'date';
+    } elseif ($row['type'] == 'time') {
+      $type = 'time';
+    } else {
+      preg_match('/^([A-Za-z0-9_]+)(\(([0-9]+(,[0-9]+)?)\))?/', $row['type'], $matches);
+      $type = (count($matches) > 0 ? $matches[1] : $row['type']);
+    }
+
+    $type == 'integer' && $this->type = 'int';
+
+    return [
+      'name' => $row['field'],
+      'null' => $row['null'] === 'YES', // 是否可為 null
+      'pk' => $row['key'] === 'PRI', // 是否為主鍵
+      'ai' => $row['extra'] === 'auto_increment', // 是否自動增加
+      'type' => $type,
+    ];
+  }
+
   private function setPrimaryKeys() {
     $className = $this->className;
-    $this->primaryKeys = isset($className::$primaryKeys) ? is_array($className::$primaryKeys) ? $className::$primaryKeys : [$className::$primaryKeys] : \M\modelsColumn(array_values(array_filter($this->columns, function ($column) { return $column->isPrimaryKey; })), 'name');
+    $this->primaryKeys = isset($className::$primaryKeys) ? is_array($className::$primaryKeys) ? $className::$primaryKeys : [$className::$primaryKeys] : \array_column(array_values(array_filter($this->columns, function ($column) { return $column['pk']; })), 'name');
     return $this;
   }
 

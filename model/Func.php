@@ -125,3 +125,41 @@ if (!function_exists('downloadWebFile')) {
     return filesize($fileName) ? $fileName : null;
   }
 }
+
+if (!function_exists('cast')) {
+  function cast($type, $val, $checkFormat) {
+    if ($val === null)
+      return null;
+    
+    switch ($type) {
+      case 'tinyint': case 'smallint': case 'mediumint': case 'int': case 'bigint':
+        if (is_int($val))
+          return $val;
+        elseif (is_numeric($val) && floor($val) != $val)
+          return (int)$val;
+        elseif (is_string($val) && is_float($val + 0))
+          return (string) $val;
+        elseif (is_float($val) && $val >= PHP_INT_MAX)
+          return number_format($val, 0, '', '');
+        else
+          return (int)$val;
+      
+      case 'float': case 'double': case 'numeric': case 'decimal': case 'dec':
+        return (double)$val;
+
+      case 'datetime': case 'timestamp': case 'date': case 'time':
+        if (!$val)
+          return null;
+
+        $val = \_M\DateTime::createByString($val, $type);
+        $checkFormat && !$val->isFormat() && \_M\Config::error($checkFormat);
+        return $val;
+
+      default:
+        if ($val instanceof \M\Uploader)
+          return $val;
+        return (string)$val;
+    }
+    return $val;
+  }
+}

@@ -354,7 +354,7 @@ Class Model {
 
 
   private function setAttr($name, $value) {
-    $this->attrs[$name] = static::table()->columns[$name]->cast($value, $this->className . ' 的欄位「' . $name . '」給予的值格式錯誤，請給予「' . static::table()->columns[$name]->type . '」的格式！');
+    $this->attrs[$name] = \M\cast(static::table()->columns[$name]['type'], $value, $this->className . ' 的欄位「' . $name . '」給予的值格式錯誤，請給予「' . static::table()->columns[$name]['type'] . '」的格式！');
     $this->flagDirty($name);
     return $value;
   }
@@ -405,7 +405,7 @@ Class Model {
     $table->insert($this->attrs);
 
     foreach (static::table()->primaryKeys as $primaryKey)
-      if (isset(static::table()->columns[$primaryKey]) && static::table()->columns[$primaryKey]->isAutoIncrement)
+      if (isset(static::table()->columns[$primaryKey]) && static::table()->columns[$primaryKey]['ai'])
         $this->attrs[$primaryKey] = \_M\Connection::instance()->lastInsertId();
     
     $this->setIsNew(false)

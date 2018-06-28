@@ -43,13 +43,10 @@ class Connection {
   }
   
   public function query($sql, $vals = [], $fetchModel = PDO::FETCH_ASSOC) {
-
     try {
       $sth = $this->connection->prepare((string)$sql);
       $sth || Config::error('執行 Connection prepare 失敗！');
-
       $sth->setFetchMode($fetchModel);
-
       $this->execute($sth, $sql, $vals) || Config::error('執行 Connection execute 失敗！');
     } catch (PDOException $e) {
       Config::error($e);
@@ -85,6 +82,7 @@ class Connection {
   public function lastInsertId() {
     return $this->connection->lastInsertId();
   }
+
   public function rollback() {
     if (!$this->connection) return false;
     $this->connection->rollback() || Config::error('Rollback 失敗！');

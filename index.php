@@ -123,39 +123,54 @@ Benchmark::markStar('整體');
   'charSet'  => 'utf8mb4',
 ]);
 
-
-\M\Uploader::setDriver('s3');
+\M\Uploader::setDriver('local');
+// \M\Uploader::setDriver('s3');
 \M\Uploader::setBaseDirs(['upload']);
 \M\Uploader::setTmpDir(__DIR__ . '/tmp/');
-\M\Uploader::setBaseUrl('http://test.ioa.tw/');
-\M\Uploader::setS3Bucket('test.ioa.tw');
+
+\M\Uploader::setBaseUrl('http://127.0.0.1/OARM/');
+// \M\Uploader::setBaseUrl('http://test.ioa.tw/');
+// \M\Uploader::setS3Bucket('test.ioa.tw');
 
 require_once 'S3.php';
 S3::init('', '');
 S3::setLogerFunc('Log::error');
 
-// echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
-// var_dump (S3::getObject('tests.ioaw.tw', 'a.php'));
-// exit ();
 
-require_once 'Thumbnail.php';
-Thumbnail::setLogerFunc('Log::error');
+require_once 'thumbnail/Thumbnail.php';
+Thumbnail::setDriver('Gd');
 
-try {
-  $img = Thumbnail::createImagick('tmp/b.jpg');
-  echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
-  var_dump ($img->saveAnalysisChart('', ''));
-  exit ();
-  $img->save('tmp/x.jpg');
+echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
 
-  // Thumbnail::createImagickPhotos(['tmp/b.jpg', ], 'tmp/x.jpg');
-} catch(Exception $e) {
-  echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
-  var_dump ('xxxxxxxx'.$e->getMessage());
-  exit ();
-}
-  exit ();
+$article = \M\Article::one(['select' => 'id, cover']);
+echo $article->cover;
 
+// $article->cover->putUrl('http://flowers.taipei/imagespace/plant_tree/original/thumb_image_6710831.JPG');
+// echo $article->cover->toDivImageTag ('w100');
+
+
+// try {
+//   Thumbnail::setDriver('Imagick');
+
+//   $img = Thumbnail::create('tmp/a.jpg');
+
+//   $img->save('tmp/x.jpg');
+
+//   // unset($img);
+
+//   // Thumbnail::createImagickPhotos(['tmp/b.jpg', ], 'tmp/x.jpg');
+// } catch(Exception $e) {
+//   echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
+//   var_dump ('xxxxxxxx'.$e->getMessage());
+//   exit ();
+// }
+
+Benchmark::markEnd('整體');
+
+echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
+var_dump(Benchmark::elapsedTime());
+var_dump(Benchmark::elapsedMemory());
+exit ();
 
 
 // new \M\Article();
@@ -178,7 +193,7 @@ try {
 
 // $article = M\Article::one(['where' => 'id = 1']);
 
-echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
+// echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
 // var_dump ($article->user->name);
 // exit ();
 
@@ -196,13 +211,8 @@ echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>
 // var_dump ($tag->articleMappings);
 // exit ();
 // echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
-
-$article = \M\Article::one(['select' => 'id, cover']);
-$article->cover->putUrl('http://flowers.taipei/imagespace/plant_tree/original/thumb_image_6710831.JPG');
-
-echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
-var_dump ($article->cover->getPathsDirs());
-exit ();
+// var_dump ($article->cover->getPathsDirs());
+// exit ();
 // var_dump ($article->cover->url());
 
 
@@ -316,13 +326,6 @@ exit ();
 // M\Article::all();
 
 
-
-Benchmark::markEnd('整體');
-
-echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
-var_dump(Benchmark::elapsedTime());
-var_dump(Benchmark::elapsedMemory());
-exit ();
 
 // $sth = \_M\Connection::instance()->query('select * from `BookArticle`;');
 
