@@ -2,7 +2,6 @@
 
 namespace M;
 
-
 abstract class Uploader {
   protected static $driver = null;
   protected static $baseDirs = ['upload'];
@@ -30,7 +29,7 @@ abstract class Uploader {
     is_string($s3Bucket) && self::$s3Bucket = trim($s3Bucket, '/');
   }
 
-  public static function bind ($orm, $column) {
+  public static function bind($orm, $column) {
     $class = get_called_class();
     return new $class($orm, $column);
   }
@@ -40,7 +39,7 @@ abstract class Uploader {
   protected $value = null;
 
   public function __construct($orm, $column) {
-    in_array($column, array_keys ($attrs = $orm->getAttrs())) || \_M\Config::error('[Uploader] Class 「' . get_class($orm) . '」 無 「' . $column . '」 欄位。');
+    in_array($column, array_keys($attrs = $orm->getAttrs()))  || \_M\Config::error('[Uploader] Class 「' . get_class($orm) . '」 無 「' . $column . '」 欄位。');
     array_key_exists($this->uniqueColumn(), $attrs)           || \_M\Config::error('[Uploader] Class 「' . get_class($orm) . '」 無 「' . $this->uniqueColumn() . '」 欄位。');
     self::$tmpDir !== null                                    || \_M\Config::error('[Uploader] 尚未設定 Tmp 目錄。');
     is_writable(self::$tmpDir)                                || \_M\Config::error('[Uploader] Tmp 目錄沒有權限寫入。tmpDir：' . self::$tmpDir);
@@ -125,7 +124,7 @@ abstract class Uploader {
 
     umaskChmod($temp, 0777);
 
-    if (!file_exists ($temp))
+    if (!file_exists($temp))
       return self::log('[Uploader] moveOriFile 移動檔案失敗。Path：' . $temp);
 
     return $temp;
@@ -225,10 +224,6 @@ abstract class Uploader {
     return $this->uploadColumnAndUpload('', $isSave);
   }
 
-  // public function getValue () {
-  //   return (string)$this->value;
-  // }
-
   public function putUrl($url) {
     $format = strtolower(pathinfo($url, PATHINFO_EXTENSION));
     $temp = downloadWebFile($url, self::$tmpDir . getRandomName() . ($format ? '.' . $format : ''));
@@ -237,17 +232,22 @@ abstract class Uploader {
 }
 
 abstract class FileUploader extends Uploader {
-  public function url ($url ='') {
-    return parent::url ('');
+  public function url($url ='') {
+    return parent::url('');
   }
 
   public function pathDirs($fileName = '') {
     return parent::pathDirs((string)$this->value);
   }
+
+  public function link($text, $attrs = []) { // $attrs = array ('class' => 'i')
+    return ($url = ($url = $this->url()) ? $url : '') ? '<a href="' . $url . '"' . ($attrs ? ' ' . implode(' ', array_map(function($key, $value) { return $key . '="' . $value . '"'; }, array_keys($attrs), $attrs)) : '') . '>' . $text . '</a>' : '';
+  }
 }
 
 abstract class ImageUploader extends Uploader {
   const SYMBOL = '_';
+  const AUTO_FORMAT = true;
 
   abstract public function versions();
 
@@ -270,136 +270,84 @@ abstract class ImageUploader extends Uploader {
     return $paths;
   }
 
-  // protected function moveFileAndUploadColumn($temp, $saveDirs, $oriName) {
-  //   $versions = $this->getVersions();
+  protected function moveFileAndUploadColumn($temp, $saveDirs, $oriName) {
+    $versions = $this->getVersions();
 
-  //   Load::sysLib ('Thumbnail.php');
-  //   $method = 'create' . $this->config['driver'];
+    if (!class_exists('Thumbnail'))
+      return self::log('[ImageUploader] 找不到 Thumbnail 縮圖物件');
 
-  //   if (!(class_exists ('Thumbnail') && is_callable (array ('Thumbnail', $method))) && !Uploader::error ('[ImageUploader] moveFileAndUploadColumn 錯誤的函式。Method：' . $method))
-  //     return false;
+    $news = [];
+    $info = @exif_read_data($temp);
+    $orientation = $info && isset($info['Orientation']) ? $info['Orientation'] : 0;
 
-  //   $news = array ();
-  //   $info = @exif_read_data ($temp);
-  //   $orientation = $info && isset ($info['Orientation']) ? $info['Orientation'] : 0;
+    try {
+      foreach ($versions as $key => $methods) {
+        $image = \Thumbnail::create($temp);
 
-  //   try {
+        $image->rotate($orientation == 6 ? 90 : ($orientation == 8 ? -90 : ($orientation == 3 ? 180 : 0)));
 
-  //     foreach ($versions as $key => $version) {
-  //       $image = Thumbnail::$method ($temp);
-  //       $image->rotate ($orientation == 6 ? 90 : ($orientation == 8 ? -90 : ($orientation == 3 ? 180 : 0)));
+        $name = !isset($name) ? getRandomName() . (ImageUploader::AUTO_FORMAT ? '.' . $image->getFormat() : '') : $name;
+        $newName = $key . ImageUploader::SYMBOL . $name;
 
-  //       $name = !isset ($name) ? getRandomName () . ($this->config['auto_add_format'] ? '.' . $image->getFormat () : '') : $name;
-  //       $new_name = $key . $this->config['separate_symbol'] . $name;
+        $newPath = self::$tmpDir . $newName;
 
-  //       $new_path = $this->tmpDir . $new_name;
-  //       $this->_utility ($image, $new_path, $key, $version) || Uploader::error ('[ImageUploader] moveFileAndUploadColumn 圖像處理失敗。');
-  //       array_push ($news, array ('name' => $new_name, 'path' => $new_path));
-  //     }
-  //   } catch (Exception $e) {
-  //     return Uploader::error ('[ImageUploader] moveFileAndUploadColumn 圖像處理失敗。Message：' . $e->getMessage ());
-  //   }
+        if (!$this->utility($image, $newPath, $key, $methods))
+          return self::log('[ImageUploader] moveFileAndUploadColumn 圖像處理失敗。');
 
-  //   count ($news) == count ($versions) || Uploader::error ('[ImageUploader] moveFileAndUploadColumn 不明原因錯誤。');
+        array_push($news, ['name' => $newName, 'path' => $newPath]);
+      }
+    } catch (\Exception $e) {
+      return self::log('[ImageUploader] moveFileAndUploadColumn 圖像處理失敗', 'Message：' . $e->getMessage());
+    }
 
-  //   switch ($this->getDriver ()) {
-  //     case 'local':
-  //       foreach ($news as $new)
-  //         if (!@rename ($new['path'], FCPATH . implode (DIRECTORY_SEPARATOR, $saveDirs) . DIRECTORY_SEPARATOR . $new['name']))
-  //           return Uploader::error ('[ImageUploader] moveFileAndUploadColumn 不明原因錯誤。');
-  //       return self::uploadColumnAndUpload ('') && self::uploadColumnAndUpload ($name) && @unlink ($temp);
-  //       break;
+    if (count($news) != count($versions))
+      return self::log('[ImageUploader] moveFileAndUploadColumn 不明原因錯誤。');
 
-  //     case 's3':
-  //       foreach ($news as $new)
-  //         if (!(Uploader::s3Instance ('putObject', $new['path'], $this->getS3Bucket (), implode (DIRECTORY_SEPARATOR, $saveDirs) . DIRECTORY_SEPARATOR . $new['name']) && @unlink ($new['path'])))
-  //           return Uploader::error ('[ImageUploader] moveFileAndUploadColumn 不明原因錯誤。');
-  //       return self::uploadColumnAndUpload ('') && self::uploadColumnAndUpload ($name) && @unlink ($temp);
-  //       break;
-  //   }
-  //   return false;
-  // }
+    switch (self::$driver) {
+      case 'local':
+        foreach ($news as $new)
+          if (!@rename($new['path'], $path = implode(DIRECTORY_SEPARATOR, $saveDirs) . DIRECTORY_SEPARATOR . $new['name']))
+            return self::log('[ImageUploader] moveFileAndUploadColumn local rename 搬移預設位置時發生錯誤。Path：' . $path);
+        break;
 
-//   private function _utility ($image, $save, $key, $version) {
-//     if (!$version)
-//       return $image->save ($save, true);
+      case 's3':
+        foreach ($news as $new) {
+          if (!\S3::putObject($new['path'], self::$s3Bucket, $uri = implode ('/', $saveDirs) . '/' . $new['name']))
+            return self::log('[ImageUploader] moveFileAndUploadColumn s3 putObject 丟至 S3 發生錯誤。Bucket：' . self::$s3Bucket . '，uri：' . $uri);
+          @unlink($new['path']) || self::log('[ImageUploader] moveFileAndUploadColumn s3 移除舊資料錯誤。');
+        }
+        break;
+    }
 
-//     if (!is_callable (array ($image, $method = array_shift ($version))))
-//       return Uploader::error ('[ImageUploader] _utility 無法呼叫的 Method，Method：' . $method);
+    @unlink($temp) || self::log('[ImageUploader] moveFileAndUploadColumn 移除舊資料錯誤。');
 
-//     call_user_func_array (array ($image, $method), $version);
-//     return $image->save ($save, true);
-//   }
+    if (!$this->uploadColumnAndUpload(''))
+      return self::log('[ImageUploader] moveFileAndUploadColumn uploadColumnAndUpload = "" 錯誤。');
 
-//   public function saveAs ($key, $version) {
-//     if (!($key && $version) && !Uploader::error ('[ImageUploader] saveAs 參數錯誤。'))
-//       return false;
+    if (!$this->uploadColumnAndUpload($name))
+      return self::log('[ImageUploader] moveFileAndUploadColumn uploadColumnAndUpload = ' . $name . ' 錯誤。');
 
-//     Load::sysLib ('Thumbnail.php');
-//     $method = 'create' . $this->config['driver'];
+    return true;
+  }
 
-//     if (!(class_exists ('Thumbnail') && is_callable (array ('Thumbnail', $method))) && !Uploader::error ('[ImageUploader] moveFileAndUploadColumn 錯誤的函式。Method：' . $method))
-//       return false;
+  private function utility($image, $savePath, $key, $methods) {
+    if (!$methods)
+      return $image->save($savePath, true);
 
-//     if (!($versions = $this->versions ()) && !Uploader::error ('[ImageUploader] saveAs 沒有其他版本可用。'))
-//       return false;
+    foreach ($methods as $method => $params)
+      if (!is_callable([$image, $method]))
+        return self::log('[ImageUploader] 無法呼叫的 Method 錯誤，Method：' . $method);
+      else
+        call_user_func_array([$image, $method], $params);
 
-//     if (isset ($versions[$key]) && !Uploader::error ('[ImageUploader] saveAs 已經有相符合的 key 名稱。'))
-//       return false;
+    return $image->save($savePath, true);
+  }
 
-//     switch ($this->getDriver ()) {
-//       case 'local':
-//         foreach (array_keys ($versions) as $oriKey)
-//           if (is_readable ($oriPath = FCPATH . implode (DIRECTORY_SEPARATOR, array_merge($this->getBaseDirectory (), $this->getSaveDirs (), array ($oriKey . $this->config['separate_symbol'] . ($name = $this->getValue ()))))))
-//             break;
+  public function toImageTag($key = '', $attrs = []) { // $attrs = ['class' => 'i']
+    return ($url = ($url = $this->url($key)) ? $url : $this->d4Url()) ? '<img src="' . $url . '"' . ($attrs ? ' ' . implode(' ', array_map(function($key, $value) { return $key . '="' . $value . '"'; }, array_keys($attrs), $attrs)) : '') . '>' : '';
+  }
 
-//         if (!file_exists ($t = FCPATH . implode (DIRECTORY_SEPARATOR, ($path = array_merge($this->getBaseDirectory (), $this->getSaveDirs ())))))
-//           Uploader::mkdir ($t, 0777, true);
-
-//         if (!is_writable ($t) && !Uploader::error ('[ImageUploader] saveAs 資料夾不能儲存。Path：' . $path))
-//           return @unlink ($t) && false;
-
-//         try {
-//           $image = Thumbnail::$method ($oriPath);
-//           $path = $t . DIRECTORY_SEPARATOR . $key . $this->config['separate_symbol'] . $name;
-
-//           if (!$this->_utility ($image, $path, $key, $version))
-//             return false;
-
-//           return $path;
-//         } catch (Exception $e) {
-//           return Uploader::error ('[ImageUploader] moveFileAndUploadColumn 圖像處理失敗。Message：' . $e->getMessage ());
-//         }
-//         break;
-
-//       case 's3':
-//         if (!Uploader::s3Instance ('getObject', implode (DIRECTORY_SEPARATOR, array_merge($path = array_merge($this->getBaseDirectory (), $this->getSaveDirs ()), array ($fileName = array_shift (array_keys ($versions)) . $this->config['separate_symbol'] . ($name = $this->getValue ())))), FCPATH . implode (DIRECTORY_SEPARATOR, $fileName = array_merge($this->getTempDirectory (), array ($fileName)))))
-//           return $this->getDebug () ? error ('ImageUploader 錯誤。', '沒有任何的檔案可以被使用。', '請確認 getVersions () 函式內有存在的檔案可被另存。', '請程式設計者確認狀況。') : array ();
-
-//         try {
-//           $image = ImageUtility::create ($fileName = FCPATH . implode (DIRECTORY_SEPARATOR, $fileName), null);
-//           $newPath = array_merge($path, array ($newName = $key . $this->config['separate_symbol'] . $name));
-
-
-//           if ($this->_utility ($image, FCPATH . implode (DIRECTORY_SEPARATOR, $newFileName = array_merge($this->getTempDirectory (), array ($newName))), $key, $version) && Uploader::s3Instance ('putFile', $newFileName = FCPATH . implode (DIRECTORY_SEPARATOR, $newFileName), $this->getS3Bucket (), implode (DIRECTORY_SEPARATOR, $newPath)) && @unlink ($newFileName) && @unlink ($fileName))
-//             return $newPath;
-//           else
-//             return array ();
-//         } catch (Exception $e) {
-//           return $this->getDebug () ? call_user_func_array ('error', $e->getMessages ()) : '';
-//         }
-//         break;
-//     }
-
-//     return false;
-//   }
-
-//   public function toImageTag ($key = '', $attrs = array ()) { // $attrs = array ('class' => 'i')
-//     return ($url = ($url = $this->url ($key)) ? $url : $this->d4Url ()) ? '<img src="' . $url . '"' . ($attrs ? ' ' . implode (' ', array_map (function ($key, $value) { return $key . '="' . $value . '"'; }, array_keys ($attrs), $attrs)) : '') . '>' : '';
-//   }
-//   public function toDivImageTag ($key = '', $attrs = array ()) { // $attrs = array ('class' => 'i')
-//     return ($str = $this->toImageTag ($key)) ? '<div' . ($attrs ? ' ' . implode (' ', array_map (function ($key, $value) { return $key . '="' . $value . '"'; }, array_keys ($attrs), $attrs)) : '') . '>' . $str . '</div>' : '';
-//   }
+  public function toDivImageTag($key = '', $divAttrs = [], $imgAttrs = []) {
+    return ($str = $this->toImageTag($key, $imgAttrs)) ? '<div' . ($divAttrs ? ' ' . implode(' ', array_map(function($key, $value) { return $key . '="' . $value . '"'; }, array_keys($divAttrs), $divAttrs)) : '') . '>' . $str . '</div>' : '';
+  }
 }
-
-// class UploaderException extends Exception {}
