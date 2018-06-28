@@ -88,18 +88,6 @@ class Thumbnail {
   }
 }
 
-// class ThumbnailDimension {
-//   private $width, $height;
-
-//   public function __construct($width, $height) {
-//     $this->width = intval($width);
-//     $this->height = intval($height);
-//     is_numeric($this->width) && is_numeric($this->height) && $this->width > 0 && $this->height > 0 || Thumbnail::error('參數格式錯誤', 'Width：' . $this->width, 'Height：' . $this->height);
-//   }
-//   public function width() { return $this->width; }
-//   public function height() { return $this->height; }
-// }
-
 abstract class ThumbnailBase {
   private $class = null;
   protected $filePath = null;
