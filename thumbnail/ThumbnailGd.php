@@ -30,7 +30,7 @@ class ThumbnailGd extends ThumbnailBase {
 
   public function getDimension($image = null) {
     $image = $image ? $image : $this->getOldImage($this->format);
-    return new ThumbnailDimension(imagesx($image), imagesy($image));
+    return [imagesx($image), imagesy($image)];
   }
 
   private function _preserveAlpha($image) {
@@ -83,24 +83,24 @@ class ThumbnailGd extends ThumbnailBase {
       return Thumbnail::log($this, '新尺寸錯誤', '尺寸寬高一定要大於 0', '寬：' . $width, '高：' . $height);
       
 
-    if ($width == $this->dimension->width() && $height == $this->dimension->height())
+    if ($width == $this->dimension[0] && $height == $this->dimension[1])
       return $this;
 
     if (!ThumbnailGd::verifyColor($color))
       return Thumbnail::log($this, '色碼格式錯誤，目前只支援字串 HEX、RGB 陣列格式', '色碼：' . (is_string($color) ? $color : json_encode($color)));
       
 
-    if ($width < $this->dimension->width() || $height < $this->dimension->height())
+    if ($width < $this->dimension[0] || $height < $this->dimension[1])
       $this->resize($width, $height);
 
     $newImage = function_exists('imagecreatetruecolor') ? imagecreatetruecolor($width, $height) : imagecreate($width, $height);
     imagefill($newImage, 0, 0, imagecolorallocate($newImage, $color[0], $color[1], $color[2]));
 
-    return $this->_copyReSampled($newImage, $this->image, intval(($width - $this->dimension->width()) / 2), intval(($height - $this->dimension->height()) / 2), 0, 0, $this->dimension->width(), $this->dimension->height(), $this->dimension->width(), $this->dimension->height());
+    return $this->_copyReSampled($newImage, $this->image, intval(($width - $this->dimension[0]) / 2), intval(($height - $this->dimension[1]) / 2), 0, 0, $this->dimension[0], $this->dimension[1], $this->dimension[0], $this->dimension[1]);
   }
 
   private function createNewDimension($width, $height) {
-    return new ThumbnailDimension(!$this->options['resizeUp'] && ($width > $this->dimension->width()) ? $this->dimension->width() : $width, !$this->options['resizeUp'] && ($height > $this->dimension->height()) ? $this->dimension->height() : $height);
+    return [!$this->options['resizeUp'] && ($width > $this->dimension[0]) ? $this->dimension[0] : $width, !$this->options['resizeUp'] && ($height > $this->dimension[1]) ? $this->dimension[1] : $height];
   }
 
   public function resizeByWidth($width) {
@@ -118,7 +118,7 @@ class ThumbnailGd extends ThumbnailBase {
     if ($width <= 0 || $height <= 0)
       return Thumbnail::log($this, '新尺寸錯誤', '尺寸寬高一定要大於 0', '寬：' . $width, '高：' . $height);
       
-    if ($width == $this->dimension->width() && $height == $this->dimension->height())
+    if ($width == $this->dimension[0] && $height == $this->dimension[1])
       return $this;
 
     $newDimension = $this->createNewDimension($width, $height);
@@ -138,10 +138,10 @@ class ThumbnailGd extends ThumbnailBase {
         break;
     }
 
-    $newImage = function_exists('imagecreatetruecolor') ? imagecreatetruecolor($newDimension->width(), $newDimension->height()) : imagecreate($newDimension->width(), $newDimension->height());
+    $newImage = function_exists('imagecreatetruecolor') ? imagecreatetruecolor($newDimension[0], $newDimension[1]) : imagecreate($newDimension[0], $newDimension[1]);
     $newImage = $this->_preserveAlpha($newImage);
 
-    return $this->_copyReSampled($newImage, $this->image, 0, 0, 0, 0, $newDimension->width(), $newDimension->height(), $this->dimension->width(), $this->dimension->height());
+    return $this->_copyReSampled($newImage, $this->image, 0, 0, 0, 0, $newDimension[0], $newDimension[1], $this->dimension[0], $this->dimension[1]);
   }
 
   public function adaptiveResizePercent($width, $height, $percent) {
@@ -156,25 +156,25 @@ class ThumbnailGd extends ThumbnailBase {
       return Thumbnail::log($this, '百分比例錯誤', '百分比要在 0 ~ 100 之間', 'Percent：' . $percent);
     
 
-    if ($width == $this->dimension->width() && $height == $this->dimension->height())
+    if ($width == $this->dimension[0] && $height == $this->dimension[1])
       return $this;
 
     $newDimension = $this->createNewDimension($width, $height);
     $newDimension = $this->calcImageSizeStrict($this->dimension, $newDimension);
-    $this->resize($newDimension->width(), $newDimension->height());
+    $this->resize($newDimension[0], $newDimension[1]);
     $newDimension = $this->createNewDimension($width, $height);
 
-    $newImage = function_exists('imagecreatetruecolor') ? imagecreatetruecolor($newDimension->width(), $newDimension->height()) : imagecreate($newDimension->width(), $newDimension->height());
+    $newImage = function_exists('imagecreatetruecolor') ? imagecreatetruecolor($newDimension[0], $newDimension[1]) : imagecreate($newDimension[0], $newDimension[1]);
     $newImage = $this->_preserveAlpha($newImage);
 
     $cropX = $cropY = 0;
 
-    if ($this->dimension->width() > $newDimension->width())
-      $cropX = intval(($percent / 100) * ($this->dimension->width() - $newDimension->width()));
-    else if ($this->dimension->height() > $newDimension->height())
-      $cropY = intval(($percent / 100) * ($this->dimension->height() - $newDimension->height()));
+    if ($this->dimension[0] > $newDimension[0])
+      $cropX = intval(($percent / 100) * ($this->dimension[0] - $newDimension[0]));
+    else if ($this->dimension[1] > $newDimension[1])
+      $cropY = intval(($percent / 100) * ($this->dimension[1] - $newDimension[1]));
 
-    return $this->_copyReSampled($newImage, $this->image, 0, 0, $cropX, $cropY, $newDimension->width(), $newDimension->height(), $newDimension->width(), $newDimension->height());
+    return $this->_copyReSampled($newImage, $this->image, 0, 0, $cropX, $cropY, $newDimension[0], $newDimension[1], $newDimension[0], $newDimension[1]);
   }
 
   public function adaptiveResize($width, $height) {
@@ -190,7 +190,7 @@ class ThumbnailGd extends ThumbnailBase {
 
     $newDimension = $this->calcImageSizePercent($percent, $this->dimension);
 
-    return $this->resize($newDimension->width(), $newDimension->height());
+    return $this->resize($newDimension[0], $newDimension[1]);
   }
 
   public function crop($startX, $startY, $width, $height) {
@@ -203,13 +203,13 @@ class ThumbnailGd extends ThumbnailBase {
     if ($startX < 0 || $startY < 0)
       return Thumbnail::log($this, '起始點錯誤', '水平、垂直的起始點一定要大於 0', '水平點：' . $startX, '垂直點：' . $startY);
 
-    if ($startX == 0 && $startY == 0 && $width == $this->dimension->width() && $height == $this->dimension->height())
+    if ($startX == 0 && $startY == 0 && $width == $this->dimension[0] && $height == $this->dimension[1])
       return $this;
 
-    $width  = $this->dimension->width() < $width ? $this->dimension->width() : $width;
-    $height = $this->dimension->height() < $height ? $this->dimension->height() : $height;
-    $startX = ($startX + $width) > $this->dimension->width() ? $this->dimension->width() - $width : $startX;
-    $startY = ($startY + $height) > $this->dimension->height() ? $this->dimension->height() - $height : $startY;
+    $width  = $this->dimension[0] < $width ? $this->dimension[0] : $width;
+    $height = $this->dimension[1] < $height ? $this->dimension[1] : $height;
+    $startX = ($startX + $width) > $this->dimension[0] ? $this->dimension[0] - $width : $startX;
+    $startY = ($startY + $height) > $this->dimension[1] ? $this->dimension[1] - $height : $startY;
     
     $newImage = function_exists('imagecreatetruecolor') ? imagecreatetruecolor($width, $height) : imagecreate($width, $height);
     $newImage = $this->_preserveAlpha($newImage);
@@ -224,17 +224,17 @@ class ThumbnailGd extends ThumbnailBase {
     if ($width <= 0 || $height <= 0)
       return Thumbnail::log($this, '新尺寸錯誤', '尺寸寬高一定要大於 0', '寬：' . $width, '高：' . $height);
 
-    if ($width == $this->dimension->width() && $height == $this->dimension->height())
+    if ($width == $this->dimension[0] && $height == $this->dimension[1])
       return $this;
 
-    if ($width > $this->dimension->width() && $height > $this->dimension->height())
+    if ($width > $this->dimension[0] && $height > $this->dimension[1])
       return $this->pad($width, $height);
 
-    $startX = intval(($this->dimension->width() - $width) / 2);
-    $startY = intval(($this->dimension->height() - $height) / 2);
+    $startX = intval(($this->dimension[0] - $width) / 2);
+    $startY = intval(($this->dimension[1] - $height) / 2);
 
-    $width  = $this->dimension->width() < $width ? $this->dimension->width() : $width;
-    $height = $this->dimension->height() < $height ? $this->dimension->height() : $height;
+    $width  = $this->dimension[0] < $width ? $this->dimension[0] : $width;
+    $height = $this->dimension[1] < $height ? $this->dimension[1] : $height;
 
     return $this->crop($startX, $startY, $width, $height);
   }
@@ -265,51 +265,51 @@ class ThumbnailGd extends ThumbnailBase {
     if ($width <= 0 || $height <= 0)
       return Thumbnail::log($this, '新尺寸錯誤', '尺寸寬高一定要大於 0', '寬：' . $width, '高：' . $height);
 
-    if ($width == $this->dimension->width() && $height == $this->dimension->height())
+    if ($width == $this->dimension[0] && $height == $this->dimension[1])
       return $this;
 
     $newDimension = $this->createNewDimension($width, $height);
     $newDimension = $this->calcImageSizeStrict($this->dimension, $newDimension);
-    $this->resize($newDimension->width(), $newDimension->height());
+    $this->resize($newDimension[0], $newDimension[1]);
 
     $newDimension = $this->createNewDimension($width, $height);
-    $newImage = function_exists('imagecreatetruecolor') ? imagecreatetruecolor($newDimension->width(), $newDimension->height()) : imagecreate($newDimension->width(), $newDimension->height());
+    $newImage = function_exists('imagecreatetruecolor') ? imagecreatetruecolor($newDimension[0], $newDimension[1]) : imagecreate($newDimension[0], $newDimension[1]);
     $newImage = $this->_preserveAlpha($newImage);
 
     $cropX = $cropY = 0;
     $item = strtolower(trim($item));
 
-    if ($this->dimension->width() > $newDimension->width()) {
+    if ($this->dimension[0] > $newDimension[0]) {
       switch ($item) {
         case 'l': case 'left':
           $cropX = 0;
           break;
 
         case 'r': case 'right':
-          $cropX = intval($this->dimension->width() - $newDimension->width());
+          $cropX = intval($this->dimension[0] - $newDimension[0]);
           break;
 
         case 'c': case 'center': default:
-          $cropX = intval(($this->dimension->width() - $newDimension->width()) / 2);
+          $cropX = intval(($this->dimension[0] - $newDimension[0]) / 2);
           break;
       }
-    } else if ($this->dimension->height() > $newDimension->height()) {
+    } else if ($this->dimension[1] > $newDimension[1]) {
       switch ($item) {
         case 't': case 'top': 
           $cropY = 0;
           break;
 
         case 'b': case 'bottom':
-          $cropY = intval($this->dimension->height() - $newDimension->height());
+          $cropY = intval($this->dimension[1] - $newDimension[1]);
           break;
 
         case 'c': case 'center': default:
-          $cropY = intval(($this->dimension->height() - $newDimension->height()) / 2);
+          $cropY = intval(($this->dimension[1] - $newDimension[1]) / 2);
           break;
       }
     }
 
-    return $this->_copyReSampled($newImage, $this->image, 0, 0, $cropX, $cropY, $newDimension->width(), $newDimension->height(), $newDimension->width(), $newDimension->height());
+    return $this->_copyReSampled($newImage, $this->image, 0, 0, $cropX, $cropY, $newDimension[0], $newDimension[1], $newDimension[0], $newDimension[1]);
   }
 
   public static function block9($files, $savePath, $interlace = null, $jpegQuality = 100) {

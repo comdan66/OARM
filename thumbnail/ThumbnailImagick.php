@@ -16,7 +16,7 @@ class ThumbnailImagick extends ThumbnailBase {
   public function getDimension($image = null) {
     $image || $image = clone $this->image;
     (($imagePage = $image->getImagePage()) && isset($imagePage['width'], $imagePage['height']) && $imagePage['width'] > 0 && $imagePage['height'] > 0) || (($imagePage = $image->getImageGeometry()) && isset($imagePage['width'], $imagePage['height']) && $imagePage['width'] > 0 && $imagePage['height'] > 0) || Thumbnail::error('無法取得尺寸');
-    return new ThumbnailDimension($imagePage['width'], $imagePage['height']);
+    return [$imagePage['width'], $imagePage['height']];
   }
 
   private function _machiningImageResize($newDimension) {
@@ -25,10 +25,10 @@ class ThumbnailImagick extends ThumbnailBase {
 
     if ($this->format == 'gif')
       do {
-        $newImage->thumbnailImage($newDimension->width(), $newDimension->height(), false);
+        $newImage->thumbnailImage($newDimension[0], $newDimension[1], false);
       } while ($newImage->nextImage() || !$newImage = $newImage->deconstructImages());
     else
-      $newImage->thumbnailImage($newDimension->width(), $newDimension->height(), false);
+      $newImage->thumbnailImage($newDimension[0], $newDimension[1], false);
 
     return $newImage;
   }
@@ -71,7 +71,7 @@ class ThumbnailImagick extends ThumbnailBase {
         $temp = new Imagick();
         $imagick->rotateImage(new ImagickPixel($color), $degree);
         $newDimension = $this->getDimension($imagick);
-        $temp->newImage($newDimension->width(), $newDimension->height(), new ImagickPixel($color));
+        $temp->newImage($newDimension[0], $newDimension[1], new ImagickPixel($color));
         $temp->compositeImage($imagick, Imagick::COMPOSITE_DEFAULT, 0, 0);
         $newImage->addImage($temp);
         $newImage->setImageDelay($imagick->getImageDelay());
@@ -79,7 +79,7 @@ class ThumbnailImagick extends ThumbnailBase {
     } else {
       $imagick->rotateImage(new ImagickPixel($color), $degree);
       $newDimension = $this->getDimension($imagick);
-      $newImage->newImage($newDimension->width(), $newDimension->height(), new ImagickPixel($color));
+      $newImage->newImage($newDimension[0], $newDimension[1], new ImagickPixel($color));
       $newImage->compositeImage($imagick, Imagick::COMPOSITE_DEFAULT, 0, 0);
     }
     return $newImage;
@@ -126,13 +126,13 @@ class ThumbnailImagick extends ThumbnailBase {
     if ($width <= 0 || $height <= 0)
       return Thumbnail::log($this, '新尺寸錯誤', '尺寸寬高一定要大於 0', '寬：' . $width, '高：' . $height);
 
-    if ($width == $this->dimension->width() && $height == $this->dimension->height())
+    if ($width == $this->dimension[0] && $height == $this->dimension[1])
       return $this;
 
     if (!is_string($color))
       return Thumbnail::log($this, '色碼格式錯誤，目前只支援字串 HEX 格式', '色碼：' . json_encode($color));
 
-    if ($width < $this->dimension->width() || $height < $this->dimension->height())
+    if ($width < $this->dimension[0] || $height < $this->dimension[1])
       $this->resize($width, $height);
 
     $newImage = new Imagick();
@@ -145,20 +145,20 @@ class ThumbnailImagick extends ThumbnailBase {
       do {
         $temp = new Imagick();
         $temp->newImage($width, $height, new ImagickPixel($color));
-        $temp->compositeImage($imagick, Imagick::COMPOSITE_DEFAULT, intval(($width - $this->dimension->width()) / 2), intval(($height - $this->dimension->height()) / 2));
+        $temp->compositeImage($imagick, Imagick::COMPOSITE_DEFAULT, intval(($width - $this->dimension[0]) / 2), intval(($height - $this->dimension[1]) / 2));
         $newImage->addImage($temp);
         $newImage->setImageDelay($imagick->getImageDelay());
       } while ($imagick->nextImage());
     } else {
       $newImage->newImage($width, $height, new ImagickPixel($color));
-      $newImage->compositeImage(clone $this->image, Imagick::COMPOSITE_DEFAULT, intval(($width - $this->dimension->width()) / 2), intval(($height - $this->dimension->height()) / 2));
+      $newImage->compositeImage(clone $this->image, Imagick::COMPOSITE_DEFAULT, intval(($width - $this->dimension[0]) / 2), intval(($height - $this->dimension[1]) / 2));
     }
 
     return $this->_updateImage($newImage);
   }
 
   private function createNewDimension ($width, $height) {
-    return new ThumbnailDimension(!$this->options['resizeUp'] && ($width > $this->dimension->width()) ? $this->dimension->width() : $width, !$this->options['resizeUp'] && ($height > $this->dimension->height()) ? $this->dimension->height() : $height);
+    return [!$this->options['resizeUp'] && ($width > $this->dimension[0]) ? $this->dimension[0] : $width, !$this->options['resizeUp'] && ($height > $this->dimension[1]) ? $this->dimension[1] : $height];
   }
 
   public function resizeByWidth($width) {
@@ -176,7 +176,7 @@ class ThumbnailImagick extends ThumbnailBase {
     if ($width <= 0 || $height <= 0)
       return Thumbnail::log($this, '新尺寸錯誤', '尺寸寬高一定要大於 0', '寬：' . $width, '高：' . $height);
 
-    if ($width == $this->dimension->width() && $height == $this->dimension->height())
+    if ($width == $this->dimension[0] && $height == $this->dimension[1])
       return $this;
 
     $newDimension = $this->createNewDimension($width, $height);
@@ -211,22 +211,22 @@ class ThumbnailImagick extends ThumbnailBase {
     if ($percent < 0 || $percent > 100)
       return Thumbnail::log($this, '百分比例錯誤', '百分比要在 0 ~ 100 之間', 'Percent：' . $percent);
 
-    if ($width == $this->dimension->width() && $height == $this->dimension->height())
+    if ($width == $this->dimension[0] && $height == $this->dimension[1])
       return $this;
     
     $newDimension = $this->createNewDimension($width, $height);
     $newDimension = $this->calcImageSizeStrict($this->dimension, $newDimension);
-    $this->resize($newDimension->width(), $newDimension->height());
+    $this->resize($newDimension[0], $newDimension[1]);
     $newDimension = $this->createNewDimension($width, $height);
 
     $cropX = $cropY = 0;
 
-    if ($this->dimension->width() > $newDimension->width())
-      $cropX = intval(($percent / 100) * ($this->dimension->width() - $newDimension->width()));
-    else if ($this->dimension->height() > $newDimension->height())
-      $cropY = intval(($percent / 100) * ($this->dimension->height() - $newDimension->height()));
+    if ($this->dimension[0] > $newDimension[0])
+      $cropX = intval(($percent / 100) * ($this->dimension[0] - $newDimension[0]));
+    else if ($this->dimension[1] > $newDimension[1])
+      $cropY = intval(($percent / 100) * ($this->dimension[1] - $newDimension[1]));
 
-    $workingImage = $this->_machiningImageCrop($cropX, $cropY, $newDimension->width(), $newDimension->height());
+    $workingImage = $this->_machiningImageCrop($cropX, $cropY, $newDimension[0], $newDimension[1]);
     return $this->_updateImage($workingImage);
   }
 
@@ -242,7 +242,7 @@ class ThumbnailImagick extends ThumbnailBase {
       return $this;
 
     $newDimension = $this->calcImageSizePercent($percent, $this->dimension);
-    return $this->resize($newDimension->width(), $newDimension->height());
+    return $this->resize($newDimension[0], $newDimension[1]);
   }
 
   public function crop($startX, $startY, $width, $height) {
@@ -255,14 +255,14 @@ class ThumbnailImagick extends ThumbnailBase {
     if ($startX < 0 || $startY < 0)
       return Thumbnail::log($this, '起始點錯誤', '水平、垂直的起始點一定要大於 0', '水平點：' . $startX, '垂直點：' . $startY);
 
-    if ($startX == 0 && $startY == 0 && $width == $this->dimension->width() && $height == $this->dimension->height())
+    if ($startX == 0 && $startY == 0 && $width == $this->dimension[0] && $height == $this->dimension[1])
       return $this;
 
-    $width  = $this->dimension->width() < $width ? $this->dimension->width() : $width;
-    $height = $this->dimension->height() < $height ? $this->dimension->height() : $height;
+    $width  = $this->dimension[0] < $width ? $this->dimension[0] : $width;
+    $height = $this->dimension[1] < $height ? $this->dimension[1] : $height;
 
-    $startX + $width > $this->dimension->width() && $startX = $this->dimension->width() - $width;
-    $startY + $height > $this->dimension->height() && $startY = $this->dimension->height() - $height;
+    $startX + $width > $this->dimension[0] && $startX = $this->dimension[0] - $width;
+    $startY + $height > $this->dimension[1] && $startY = $this->dimension[1] - $height;
 
     $workingImage = $this->_machiningImageCrop($startX, $startY, $width, $height);
     return $this->_updateImage($workingImage);
@@ -275,16 +275,16 @@ class ThumbnailImagick extends ThumbnailBase {
     if ($width <= 0 || $height <= 0)
       return Thumbnail::log($this, '新尺寸錯誤', '尺寸寬高一定要大於 0', '寬：' . $width, '高：' . $height);
 
-    if ($width == $this->dimension->width() && $height == $this->dimension->height())
+    if ($width == $this->dimension[0] && $height == $this->dimension[1])
       return $this;
 
-    if ($width > $this->dimension->width() && $height > $this->dimension->height())
+    if ($width > $this->dimension[0] && $height > $this->dimension[1])
       return $this->pad($width, $height);
 
-    $startX = intval(($this->dimension->width() - $width) / 2);
-    $startY = intval(($this->dimension->height() - $height) / 2);
-    $width  = $this->dimension->width() < $width ? $this->dimension->width() : $width;
-    $height = $this->dimension->height() < $height ? $this->dimension->height() : $height;
+    $startX = intval(($this->dimension[0] - $width) / 2);
+    $startY = intval(($this->dimension[1] - $height) / 2);
+    $width  = $this->dimension[0] < $width ? $this->dimension[0] : $width;
+    $height = $this->dimension[1] < $height ? $this->dimension[1] : $height;
 
     return $this->crop($startX, $startY, $width, $height);
   }
@@ -311,48 +311,48 @@ class ThumbnailImagick extends ThumbnailBase {
     if ($width <= 0 || $height <= 0)
       return Thumbnail::log($this, '新尺寸錯誤', '尺寸寬高一定要大於 0', '寬：' . $width, '高：' . $height);
 
-    if ($width == $this->dimension->width() && $height == $this->dimension->height())
+    if ($width == $this->dimension[0] && $height == $this->dimension[1])
       return $this;
 
     $newDimension = $this->createNewDimension($width, $height);
     $newDimension = $this->calcImageSizeStrict($this->dimension, $newDimension);
-    $this->resize($newDimension->width(), $newDimension->height());
+    $this->resize($newDimension[0], $newDimension[1]);
     $newDimension = $this->createNewDimension($width, $height);
     
     $cropX = $cropY = 0;
     $item = strtolower(trim($item));
 
-    if ($this->dimension->width() > $newDimension->width()) {
+    if ($this->dimension[0] > $newDimension[0]) {
       switch ($item) {
         case 'l': case 'left':
           $cropX = 0;
           break;
 
         case 'r': case 'right':
-          $cropX = intval($this->dimension->width() - $newDimension->width());
+          $cropX = intval($this->dimension[0] - $newDimension[0]);
           break;
 
         case 'c': case 'center': default:
-          $cropX = intval(($this->dimension->width() - $newDimension->width()) / 2);
+          $cropX = intval(($this->dimension[0] - $newDimension[0]) / 2);
           break;
       }
-    } else if ($this->dimension->height() > $newDimension->height()) {
+    } else if ($this->dimension[1] > $newDimension[1]) {
       switch ($item) {
         case 't': case 'top': 
           $cropY = 0;
           break;
 
         case 'b': case 'bottom':
-          $cropY = intval($this->dimension->height() - $newDimension->height());
+          $cropY = intval($this->dimension[1] - $newDimension[1]);
           break;
 
         case 'c': case 'center': default:
-          $cropY = intval(($this->dimension->height() - $newDimension->height()) / 2);
+          $cropY = intval(($this->dimension[1] - $newDimension[1]) / 2);
           break;
       }
     }
 
-    $workingImage = $this->_machiningImageCrop($cropX, $cropY, $newDimension->width(), $newDimension->height());
+    $workingImage = $this->_machiningImageCrop($cropX, $cropY, $newDimension[0], $newDimension[1]);
 
     return $this->_updateImage($workingImage);
   }
@@ -440,8 +440,8 @@ class ThumbnailImagick extends ThumbnailBase {
         $temp = new Imagick();
         $imagick->setimagebackgroundcolor("black");
         $imagick->gammaImage(0.75);
-        $imagick->vignetteImage(0, max($this->dimension->width(), $this->dimension->height()) * 0.2, 0 - ($this->dimension->width() * 0.05), 0 - ($this->dimension->height() * 0.05));
-        $temp->newImage($this->dimension->width(), $this->dimension->height(), new ImagickPixel('transparent'));
+        $imagick->vignetteImage(0, max($this->dimension[0], $this->dimension[1]) * 0.2, 0 - ($this->dimension[0] * 0.05), 0 - ($this->dimension[1] * 0.05));
+        $temp->newImage($this->dimension[0], $this->dimension[1], new ImagickPixel('transparent'));
         $temp->compositeImage($imagick, Imagick::COMPOSITE_DEFAULT, 0, 0);
 
         $newImage->addImage($temp);
@@ -451,7 +451,7 @@ class ThumbnailImagick extends ThumbnailBase {
       $newImage = clone $this->image;
       $newImage->setimagebackgroundcolor("black");
       $newImage->gammaImage(0.75);
-      $newImage->vignetteImage(0, max($this->dimension->width(), $this->dimension->height()) * 0.2, 0 - ($this->dimension->width() * 0.05), 0 - ($this->dimension->height() * 0.05));
+      $newImage->vignetteImage(0, max($this->dimension[0], $this->dimension[1]) * 0.2, 0 - ($this->dimension[0] * 0.05), 0 - ($this->dimension[1] * 0.05));
     }
     return $this->_updateImage($newImage);
   }
@@ -469,7 +469,7 @@ class ThumbnailImagick extends ThumbnailBase {
 
     $datas = [];
     $index = 0;
-    $pixelCount = $this->dimension->width() * $this->dimension->height();
+    $pixelCount = $this->dimension[0] * $this->dimension[1];
 
     if ($pixels && $maxCount)
       foreach ($pixels as $pixel)
@@ -561,7 +561,7 @@ class ThumbnailImagick extends ThumbnailBase {
       
       do {
         $temp = new Imagick();
-        $temp->newImage($this->dimension->width(), $this->dimension->height(), new ImagickPixel('transparent'));
+        $temp->newImage($this->dimension[0], $this->dimension[1], new ImagickPixel('transparent'));
         $temp->compositeImage($imagick, Imagick::COMPOSITE_DEFAULT, 0, 0);
         $temp->annotateImage($draw, $startX, $startY, $degree, $text);
         $newImage->addImage($temp);

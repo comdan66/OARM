@@ -88,17 +88,17 @@ class Thumbnail {
   }
 }
 
-class ThumbnailDimension {
-  private $width, $height;
+// class ThumbnailDimension {
+//   private $width, $height;
 
-  public function __construct($width, $height) {
-    $this->width = intval($width);
-    $this->height = intval($height);
-    is_numeric($this->width) && is_numeric($this->height) && $this->width > 0 && $this->height > 0 || Thumbnail::error('參數格式錯誤', 'Width：' . $this->width, 'Height：' . $this->height);
-  }
-  public function width() { return $this->width; }
-  public function height() { return $this->height; }
-}
+//   public function __construct($width, $height) {
+//     $this->width = intval($width);
+//     $this->height = intval($height);
+//     is_numeric($this->width) && is_numeric($this->height) && $this->width > 0 && $this->height > 0 || Thumbnail::error('參數格式錯誤', 'Width：' . $this->width, 'Height：' . $this->height);
+//   }
+//   public function width() { return $this->width; }
+//   public function height() { return $this->height; }
+// }
 
 abstract class ThumbnailBase {
   private $class = null;
@@ -151,53 +151,53 @@ abstract class ThumbnailBase {
   }
 
   protected function calcImageSizePercent($percent, $dimension) {
-    return new ThumbnailDimension(ceil($dimension->width() * $percent / 100), ceil($dimension->height() * $percent / 100));
+    return [ceil($dimension[0] * $percent / 100), ceil($dimension[1] * $percent / 100)];
   }
 
   protected function calcWidth($oldDimension, $newDimension) {
-    $newWidthPercentage = 100 * $newDimension->width() / $oldDimension->width();
-    $height = ceil($oldDimension->height() * $newWidthPercentage / 100);
-    return new ThumbnailDimension($newDimension->width(), $height);
+    $newWidthPercentage = 100 * $newDimension[0] / $oldDimension[0];
+    $height = ceil($oldDimension[1] * $newWidthPercentage / 100);
+    return [$newDimension[0], $height];
   }
 
   protected function calcHeight($oldDimension, $newDimension) {
-    $newHeightPercentage  = 100 * $newDimension->height() / $oldDimension->height();
-    $width = ceil($oldDimension->width() * $newHeightPercentage / 100);
-    return new ThumbnailDimension($width, $newDimension->height());
+    $newHeightPercentage  = 100 * $newDimension[1] / $oldDimension[1];
+    $width = ceil($oldDimension[0] * $newHeightPercentage / 100);
+    return [$width, $newDimension[1]];
   }
 
   protected function calcImageSize($oldDimension, $newDimension) {
-    $newSize = new ThumbnailDimension($oldDimension->width(), $oldDimension->height());
+    $newSize = [$oldDimension[0], $oldDimension[1]];
 
-    if ($newDimension->width() > 0) {
+    if ($newDimension[0] > 0) {
       $newSize = $this->calcWidth ($oldDimension, $newDimension);
-      ($newDimension->height() > 0) && ($newSize->height() > $newDimension->height()) && $newSize = $this->calcHeight($oldDimension, $newDimension);
+      ($newDimension[1] > 0) && ($newSize[1] > $newDimension[1]) && $newSize = $this->calcHeight($oldDimension, $newDimension);
     }
-    if ($newDimension->height() > 0) {
+    if ($newDimension[1] > 0) {
       $newSize = $this->calcHeight($oldDimension, $newDimension);
-      ($newDimension->width() > 0) && ($newSize->width() > $newDimension->width()) && $newSize = $this->calcWidth($oldDimension, $newDimension);
+      ($newDimension[0] > 0) && ($newSize[0] > $newDimension[0]) && $newSize = $this->calcWidth($oldDimension, $newDimension);
     }
     return $newSize;
   }
 
   protected function calcImageSizeStrict($oldDimension, $newDimension) {
-    $newSize = new ThumbnailDimension($newDimension->width(), $newDimension->height());
+    $newSize = [$newDimension[0], $newDimension[1]];
 
-    if ($newDimension->width() >= $newDimension->height()) {
-      if ($oldDimension->width() > $oldDimension->height())  {
+    if ($newDimension[0] >= $newDimension[1]) {
+      if ($oldDimension[0] > $oldDimension[1])  {
         $newSize = $this->calcHeight($oldDimension, $newDimension);
-        $newSize->width() < $newDimension->width() && $newSize = $this->calcWidth($oldDimension, $newDimension);
-      } else if ($oldDimension->height() >= $oldDimension->width()) {
+        $newSize[0] < $newDimension[0] && $newSize = $this->calcWidth($oldDimension, $newDimension);
+      } else if ($oldDimension[1] >= $oldDimension[0]) {
         $newSize = $this->calcWidth($oldDimension, $newDimension);
-        $newSize->height() < $newDimension->height() && $newSize = $this->calcHeight($oldDimension, $newDimension);
+        $newSize[1] < $newDimension[1] && $newSize = $this->calcHeight($oldDimension, $newDimension);
       }
-    } else if ($newDimension->height() > $newDimension->width()) {
-      if ($oldDimension->width() >= $oldDimension->height()) {
+    } else if ($newDimension[1] > $newDimension[0]) {
+      if ($oldDimension[0] >= $oldDimension[1]) {
         $newSize = $this->calcWidth($oldDimension, $newDimension);
-        $newSize->height() < $newDimension->height() && $newSize = $this->calcHeight($oldDimension, $newDimension);
-      } else if ($oldDimension->height() > $oldDimension->width()) {
+        $newSize[1] < $newDimension[1] && $newSize = $this->calcHeight($oldDimension, $newDimension);
+      } else if ($oldDimension[1] > $oldDimension[0]) {
         $newSize = $this->calcHeight($oldDimension, $newDimension);
-        $newSize->width() < $newDimension->width() && $newSize = $this->calcWidth($oldDimension, $newDimension);
+        $newSize[0] < $newDimension[0] && $newSize = $this->calcWidth($oldDimension, $newDimension);
       }
     }
     return $newSize;
