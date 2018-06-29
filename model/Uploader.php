@@ -39,7 +39,7 @@ abstract class Uploader {
   protected $value = null;
 
   public function __construct($orm, $column) {
-    in_array($column, array_keys($attrs = $orm->getAttrs()))  || \_M\Config::error('[Uploader] Class 「' . get_class($orm) . '」 無 「' . $column . '」 欄位。');
+    $attrs = $orm->attrs();
     array_key_exists($this->uniqueColumn(), $attrs)           || \_M\Config::error('[Uploader] Class 「' . get_class($orm) . '」 無 「' . $this->uniqueColumn() . '」 欄位。');
     self::$tmpDir !== null                                    || \_M\Config::error('[Uploader] 尚未設定 Tmp 目錄。');
     is_writable(self::$tmpDir)                                || \_M\Config::error('[Uploader] Tmp 目錄沒有權限寫入。tmpDir：' . self::$tmpDir);
@@ -57,6 +57,7 @@ abstract class Uploader {
   protected function uniqueColumn() {
     return 'id';
   }
+
   public function __toString() {
     return (string)$this->value;
   }
@@ -70,7 +71,7 @@ abstract class Uploader {
   }
 
   public function getSaveDirs() {
-    return is_numeric($id = $this->orm->getAttrs($this->uniqueColumn(), 0)) ? array_merge([$this->orm->getTableName(), $this->column], str_split(sprintf('%016s', dechex($id)), 2)) : [$this->orm->getTableName(), $this->column];
+    return is_numeric($id = $this->orm->attrs($this->uniqueColumn(), 0)) ? array_merge([$this->orm->getTableName(), $this->column], str_split(sprintf('%08s', dechex($id)), 2)) : [$this->orm->getTableName(), $this->column];
   }
 
   protected function d4Url() {

@@ -141,11 +141,22 @@ require_once 'thumbnail/Thumbnail.php';
 Thumbnail::setDriver('Gd');
 
 echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
+echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
+echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
+// var_dump ($a = base_convert('zzz', 36, 10), strlen($a));
 
-$article = \M\Article::one(['select' => 'id, cover']);
-echo $article->cover;
+$article = \M\Article::one(['select' => 'id']);
+echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
+var_dump ($article->attrs());
 
+// $article->tit = 123;
+// $article->save ();
 // $article->cover->putUrl('http://flowers.taipei/imagespace/plant_tree/original/thumb_image_6710831.JPG');
+// echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
+// var_dump ($article->cover->url());
+// var_dump ($article->cover->toImageTag('w100'));
+
+
 // echo $article->cover->toDivImageTag ('w100');
 
 

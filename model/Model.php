@@ -14,7 +14,8 @@ require_once 'core/Config.php';
 $modelRecord = [];
 
 Class Model {
-  private static $validOptions = ['where', 'limit', 'offset', 'order', 'select', 'include', 'readonly', 'group', 'having'];
+
+  private static $validOptions = ['where', 'limit', 'offset', 'order', 'select', 'group', 'having', 'include', 'readonly'];
 
   public static function one() {
     return call_user_func_array(['static', 'find'], array_merge(['one'], func_get_args()));
@@ -33,9 +34,10 @@ Class Model {
   }
 
   public static function count($options = []) {
-    $obj = call_user_func_array(['static', 'find'], array_merge(['one'], [array_merge($options, ['select' => 'COUNT(*)', 'readonly' => true])]))->getAttrs();
+    $obj = call_user_func_array(['static', 'find'], array_merge(['one'], [array_merge($options, ['select' => 'COUNT(*)', 'readonly' => true])]))->attrs();
     return intval($obj = array_shift($obj));
   }
+
   public static function find() {
     $className = get_called_class();
     
@@ -85,7 +87,6 @@ Class Model {
   }
 
   private $attrs = [];
-  // private $attrs = [];
   private $className = null;
   private $tableName = null;
   
@@ -110,7 +111,7 @@ Class Model {
     return $this;
   }
 
-  public function getAttrs($key = null, $d4 = null) {
+  public function attrs($key = null, $d4 = null) {
     return $key !== null ? array_key_exists($key, $this->attrs) ? $this->attrs[$key] : $d4 : $this->attrs;
   }
 
@@ -153,7 +154,6 @@ Class Model {
         \_M\Config::error('找不到 Primary Key 的值，請注意是否未 SELECT Primary Key！');
     return $tmp;
   }
-
 
   public static function relations($key, $options, $models, $include) {
     $methodOne = in_array($key, ['hasOne', 'belongToOne']);
@@ -315,6 +315,7 @@ Class Model {
 
     }, $className::selectQuery($sql));
   }
+
   public function save() {
     return $this->isNew ? $this->insert() : $this->update();
   }
@@ -346,8 +347,11 @@ Class Model {
     if ($this->isReadonly)
       \_M\Config::error('此物件是唯讀的狀態！');
 
-    if (array_key_exists($name, $this->attrs) && isset(static::table()->columns[$name]))
-      return $this->setAttr($name, $value);
+    if (array_key_exists($name, $this->attrs))
+      if (isset(static::table()->columns[$name]))
+        return $this->setAttr($name, $value);
+      else
+        return $this->attrs[$name] = $value;
 
     \_M\Config::error($this->className . ' 找不到名稱為「' . $name . '」此物件變數！');
   }
@@ -358,10 +362,12 @@ Class Model {
     $this->flagDirty($name);
     return $value;
   }
+
   public function cleanFlagDirty() {
     $this->dirty = [];
     return $this;
   }
+
   public function flagDirty($name = null) {
     $this->dirty || $this->cleanFlagDirty();
     $this->dirty[$name] = true;
@@ -393,6 +399,7 @@ Class Model {
 
     return true;
   }
+
   public function insert() {
     $this->isReadonly && \_M\Config::error('此資料為不可寫入(readonly)型態！');
 
@@ -420,6 +427,7 @@ Class Model {
     $model->save();
     return $model;
   }
+
   public function __toString() {
     return json_encode(array_map(function ($attr) {
       return '' . $attr;
@@ -440,15 +448,9 @@ Class Model {
     $uploaders = isset($className::$uploaders) ? $className::$uploaders : [];
     
     foreach ($uploaders as $column => $class)
-      if (class_exists($class = '\\M\\' . $class))
+      if (class_exists($class = '\\M\\' . $class) && in_array($column, array_keys($this->attrs())))
         $class::bind($this, $column);
-    
-    // echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
-    // var_dump ();
-    // exit ();
-    // echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
-    // var_dump (1);
-    // exit ();
+
     return $this;
   }
 }
